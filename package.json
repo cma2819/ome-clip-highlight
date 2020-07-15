@@ -1,9 +1,9 @@
 {
-  "name": "bundle-name",
+  "name": "ome-clip-highlight",
   "version": "0.9.0",
-  "description": "<Description of this bundle>",
-  "homepage": "<homepage url>",
-  "author": "<author>",
+  "description": "NodeCG bundle for streaming clip highlight",
+  "homepage": "https://github.com/cma2819/ome-clip-highlight#readme",
+  "author": "Cma",
   "files": [
     "dashboard",
     "graphics",
@@ -36,11 +36,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+<Git repository URL>"
+    "url": "git+https://github.com/cma2819/ome-clip-highlight.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/<author>/<repository>/issues"
+    "url": "https://github.com/cma2819/ome-clip-highlight/issues"
   },
   "devDependencies": {
     "@types/node": "^13.7.1",

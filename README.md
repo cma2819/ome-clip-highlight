@@ -1,2 +1,2 @@
-# ome-speedrun-layout
-NodeCG layout bundle for RTA 1n Kagawa Online.
+# ome-clip-highlight
+NodeCG bundle for streaming clip highlight
