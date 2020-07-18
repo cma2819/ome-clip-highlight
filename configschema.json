@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "defaultChannel": {
+            "type": "string",
+            "default": "<default channel name>"
+        },
+        "twitch": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "key": {
+                    "type": "string",
+                    "default": "<twitch client ID>"
+                },
+                "secret": {
+                    "type": "string",
+                    "default": "<twitch client secret>"
+                }
+            },
+            "required": [
+                "key",
+                "secret"
+            ]
+        }
+    },
+    "required": [
+        "defaultChannel",
+        "twitch"
+    ]
+}

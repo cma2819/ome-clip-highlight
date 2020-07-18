@@ -1,0 +1,68 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "url": {
+            "type": "string"
+        },
+        "embedUrl": {
+            "type": "string"
+        },
+        "broadcasterId": {
+            "type": "string"
+        },
+        "broadcasterName": {
+            "type": "string"
+        },
+        "creatorId": {
+            "type": "string"
+        },
+        "creatorName": {
+            "type": "string"
+        },
+        "videoId": {
+            "type": "string"
+        },
+        "gameId": {
+            "type": "string"
+        },
+        "language": {
+            "type": "string"
+        },
+        "pagination": {
+            "type": "object"
+        },
+        "title": {
+            "type": "string"
+        },
+        "viewCount": {
+            "type": "integer"
+        },
+        "createdAt": {
+            "type": "string"
+        },
+        "thumbnailUrl": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "id",
+        "url",
+        "embedUrl",
+        "broadcasterId",
+        "broadcasterName",
+        "creatorId",
+        "creatorName",
+        "videoId",
+        "gameId",
+        "language",
+        "title",
+        "viewCount",
+        "createdAt",
+        "thumbnailUrl"
+    ]
+}

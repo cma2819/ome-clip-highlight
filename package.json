@@ -16,7 +16,20 @@
   ],
   "nodecg": {
     "compatibleRange": "^1.1.1",
-    "dashboardPanels": [],
+    "dashboardPanels": [
+      {
+        "name": "current-clip-control",
+        "title": "Current Clip Control",
+        "width": 4,
+        "file": "current-control/index.html"
+      },
+      {
+        "name": "import-clip",
+        "title": "Import Clip",
+        "width": 8,
+        "file": "import-clip/index.html"
+      }
+    ],
     "graphics": []
   },
   "main": "../../index.js",
@@ -28,7 +41,7 @@
     "build:dashboard": "parcel build src/browser/dashboard/*/*.html --out-dir dashboard --public-url ./",
     "build:extension": "tsc -b src/extension/",
     "build:graphics": "parcel build src/browser/graphics/*.html --out-dir graphics --public-url ./",
-    "watch:dashboard": "parcel watch src/browser/dashboard/*.html --out-dir dashboard --public-url ./",
+    "watch:dashboard": "parcel watch src/browser/dashboard/*/*.html --out-dir dashboard --public-url ./",
     "watch:extension": "tsc -b src/extension/ -w",
     "watch:graphics": "parcel watch src/browser/graphics/*.html --out-dir graphics --public-url ./",
     "start": "node ../..",
@@ -43,9 +56,11 @@
     "url": "https://github.com/cma2819/ome-clip-highlight/issues"
   },
   "devDependencies": {
+    "@types/clone": "^0.1.30",
     "@types/node": "^13.7.1",
     "@typescript-eslint/eslint-plugin": "^2.19.2",
     "@typescript-eslint/parser": "^2.19.2",
+    "@vue/component-compiler-utils": "^3.1.2",
     "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-vue": "^6.2.1",
@@ -58,8 +73,11 @@
     "vuex-module-decorators": "^0.16.1"
   },
   "dependencies": {
-    "font-awesome": "^4.7.0",
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "axios": "^0.19.2",
+    "clone": "^2.1.2",
     "vue": "^2.6.11",
+    "vue-hot-reload-api": "^2.3.4",
     "vuetify": "^2.2.12",
     "vuex": "^3.1.2"
   }

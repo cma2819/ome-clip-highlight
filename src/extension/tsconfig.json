@@ -1,5 +1,11 @@
 {
     "extends": "../../tsconfig",
+    "compilerOptions": {
+        "types": ["node"],
+        "module": "commonjs",
+        "rootDir": ".",
+        "outDir": "../../extension"
+    },
     "include":[
         "**/*.ts",
         "../nodecg/**/*.ts"
