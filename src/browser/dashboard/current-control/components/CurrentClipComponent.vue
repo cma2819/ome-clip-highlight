@@ -11,7 +11,7 @@
     <v-row align="center">
       <v-col cols="4">
         <v-card-text>
-          <v-img src="https://clips-media-assets2.twitch.tv/AT-cm%7C773261758-preview-480x272.jpg"></v-img>
+          <v-img :src="clip.thumbnailUrl"></v-img>
         </v-card-text>
       </v-col>
       <v-col>
