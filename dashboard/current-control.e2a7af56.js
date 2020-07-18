@@ -54878,14 +54878,7 @@ exports.default = CurrentClipComponent;
             [
               _c(
                 "v-card-text",
-                [
-                  _c("v-img", {
-                    attrs: {
-                      src:
-                        "https://clips-media-assets2.twitch.tv/AT-cm%7C773261758-preview-480x272.jpg"
-                    }
-                  })
-                ],
+                [_c("v-img", { attrs: { src: _vm.clip.thumbnailUrl } })],
                 1
               )
             ],
@@ -55250,7 +55243,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58893" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62613" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -64,6 +64,13 @@
         >
           有効化
         </v-btn>
+        <v-btn
+          icon
+          class="ml-2"
+          @click="transition"
+        >
+          <v-icon>fas fa-share</v-icon>
+        </v-btn>
       </v-row>
     </v-expansion-panel-content>
   </v-expansion-panel>
@@ -126,6 +133,11 @@ export default class ClipListElementComponent extends Vue {
   @Emit()
   disable(): void {
     nodecg.sendMessage('disableClip', this.data.id);
+  }
+
+  @Emit()
+  transition(): void {
+    nodecg.sendMessage('transitionTo', this.data.id);
   }
 }
 </script>

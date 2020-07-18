@@ -55056,6 +55056,10 @@ function (_super) {
     nodecg.sendMessage('disableClip', this.data.id);
   };
 
+  ClipListElementComponent.prototype.transition = function () {
+    nodecg.sendMessage('transitionTo', this.data.id);
+  };
+
   __decorate([vue_property_decorator_1.Prop(Number)], ClipListElementComponent.prototype, "index", void 0);
 
   __decorate([vue_property_decorator_1.Prop(Object)], ClipListElementComponent.prototype, "data", void 0);
@@ -55065,6 +55069,8 @@ function (_super) {
   __decorate([vue_property_decorator_1.Emit()], ClipListElementComponent.prototype, "enable", null);
 
   __decorate([vue_property_decorator_1.Emit()], ClipListElementComponent.prototype, "disable", null);
+
+  __decorate([vue_property_decorator_1.Emit()], ClipListElementComponent.prototype, "transition", null);
 
   ClipListElementComponent = __decorate([vue_property_decorator_1.Component({
     components: {
@@ -55190,7 +55196,18 @@ exports.default = ClipListElementComponent;
                     "v-btn",
                     { attrs: { color: "success" }, on: { click: _vm.enable } },
                     [_vm._v("\n        有効化\n      ")]
-                  )
+                  ),
+              _vm._v(" "),
+              _c(
+                "v-btn",
+                {
+                  staticClass: "ml-2",
+                  attrs: { icon: "" },
+                  on: { click: _vm.transition }
+                },
+                [_c("v-icon", [_vm._v("fas fa-share")])],
+                1
+              )
             ],
             1
           )
@@ -55733,7 +55750,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58893" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62613" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
