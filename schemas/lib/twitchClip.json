@@ -33,9 +33,6 @@
         "language": {
             "type": "string"
         },
-        "pagination": {
-            "type": "object"
-        },
         "title": {
             "type": "string"
         },

@@ -24,6 +24,9 @@ export const clipControl = (nodecg: NodeCG): void => {
   const clipStateArrayReplicant = nodecg.Replicant('twitchClipStateArray', {
     defaultValue: []
   });
+  const currentClipReplicant = nodecg.Replicant('currentTwitchClip', {
+    defaultValue: null
+  });
 
   nodecg.listenFor('enableClip', (id: string) => {
     const clips = clipStateArrayReplicant.value;
@@ -51,4 +54,7 @@ export const clipControl = (nodecg: NodeCG): void => {
     clipStateArrayReplicant.value = calcClipRank(clips);
   });
 
+  nodecg.listenFor('transitionTo', (id: string) => {
+    currentClipReplicant.value = id;
+  })
 }

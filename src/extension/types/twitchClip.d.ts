@@ -8,9 +8,6 @@ export type TwitchClip = {
   gameId: string;
   id: string;
   language: string;
-  pagination: {
-    [k: string]: string;
-  };
   thumbnailUrl: string;
   title: string;
   url: string;

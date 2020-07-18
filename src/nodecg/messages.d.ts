@@ -17,4 +17,8 @@ export type MessageMap = {
   'disableClip': {
     data: string
   }
+
+  'transitionTo': {
+    data: string
+  }
 };

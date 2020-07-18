@@ -93,7 +93,6 @@ exports.getClips = function (broadcasterId, length, start, end, credentials) { r
                             gameId: data.game_id,
                             id: data.id,
                             language: data.language,
-                            pagination: data.pagination,
                             thumbnailUrl: data.thumbnail_url,
                             title: data.title,
                             url: data.url,

@@ -72,7 +72,6 @@ export const getClips = async (broadcasterId: string, length: number, start: Dat
       gameId: data.game_id,
       id: data.id,
       language: data.language,
-      pagination: data.pagination,
       thumbnailUrl: data.thumbnail_url,
       title: data.title,
       url: data.url,

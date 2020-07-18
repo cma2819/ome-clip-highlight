@@ -16,9 +16,6 @@ export type TwitchClipArray = {
 	videoId: string;
 	gameId: string;
 	language: string;
-	pagination?: {
-		[k: string]: any;
-	};
 	title: string;
 	viewCount: number;
 	createdAt: string;

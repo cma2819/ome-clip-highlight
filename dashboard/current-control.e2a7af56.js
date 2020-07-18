@@ -52049,7 +52049,7 @@ function patchScopedSlots (instance) {
   }
 }
 
-},{}],"import-clip/components/ImportButtonComponent.vue":[function(require,module,exports) {
+},{}],"current-control/components/PrevClipButtonComponent.vue":[function(require,module,exports) {
 "use strict";
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -52097,408 +52097,55 @@ Object.defineProperty(exports, "__esModule", {
 
 var vue_property_decorator_1 = require("vue-property-decorator");
 
-var ImportButtonComponent =
+var PrevClipButtonComponent =
 /** @class */
 function (_super) {
-  __extends(ImportButtonComponent, _super);
+  __extends(PrevClipButtonComponent, _super);
 
-  function ImportButtonComponent() {
+  function PrevClipButtonComponent() {
     return _super !== null && _super.apply(this, arguments) || this;
   }
 
-  ImportButtonComponent.prototype.importClips = function () {
-    if (this.clipLength > 100) {
+  PrevClipButtonComponent.prototype.transition = function () {
+    if (this.clip === null) {
       return;
     }
 
-    nodecg.sendMessage('importClip', {
-      channel: this.channel,
-      sort: this.sortKey,
-      length: this.clipLength,
-      start: this.start,
-      end: this.end
-    });
+    nodecg.sendMessage('transitionTo', this.clip.id);
   };
 
-  __decorate([vue_property_decorator_1.Prop(String)], ImportButtonComponent.prototype, "channel", void 0);
+  __decorate([vue_property_decorator_1.Prop(Object)], PrevClipButtonComponent.prototype, "clip", void 0);
 
-  __decorate([vue_property_decorator_1.Prop(String)], ImportButtonComponent.prototype, "sortKey", void 0);
+  __decorate([vue_property_decorator_1.Emit()], PrevClipButtonComponent.prototype, "transition", null);
 
-  __decorate([vue_property_decorator_1.Prop(String)], ImportButtonComponent.prototype, "start", void 0);
-
-  __decorate([vue_property_decorator_1.Prop(String)], ImportButtonComponent.prototype, "end", void 0);
-
-  __decorate([vue_property_decorator_1.Prop(Number)], ImportButtonComponent.prototype, "clipLength", void 0);
-
-  __decorate([vue_property_decorator_1.Emit()], ImportButtonComponent.prototype, "importClips", null);
-
-  ImportButtonComponent = __decorate([vue_property_decorator_1.Component], ImportButtonComponent);
-  return ImportButtonComponent;
+  PrevClipButtonComponent = __decorate([vue_property_decorator_1.Component], PrevClipButtonComponent);
+  return PrevClipButtonComponent;
 }(vue_property_decorator_1.Vue);
 
-exports.default = ImportButtonComponent;
-        var $786f45 = exports.default || module.exports;
+exports.default = PrevClipButtonComponent;
+        var $aa6fa4 = exports.default || module.exports;
       
-      if (typeof $786f45 === 'function') {
-        $786f45 = $786f45.options;
+      if (typeof $aa6fa4 === 'function') {
+        $aa6fa4 = $aa6fa4.options;
       }
     
         /* template */
-        Object.assign($786f45, (function () {
+        Object.assign($aa6fa4, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
     "v-btn",
-    { attrs: { block: "", color: "info" }, on: { click: _vm.importClips } },
-    [_vm._v("\n  クリップのインポート\n")]
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: null,
-            functional: undefined
-          };
-        })());
-      
-    /* hot reload */
-    (function () {
-      if (module.hot) {
-        var api = require('vue-hot-reload-api');
-        api.install(require('vue'));
-        if (api.compatible) {
-          module.hot.accept();
-          if (!module.hot.data) {
-            api.createRecord('$786f45', $786f45);
-          } else {
-            api.reload('$786f45', $786f45);
-          }
-        }
-
-        
-      }
-    })();
-},{"vue-property-decorator":"../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","vue-hot-reload-api":"../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../node_modules/vue/dist/vue.runtime.esm.js"}],"import-clip/components/ImportAreaComponent.vue":[function(require,module,exports) {
-"use strict";
-
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-var __extends = this && this.__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
-      __proto__: []
-    } instanceof Array && function (d, b) {
-      d.__proto__ = b;
-    } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
-    };
-
-    return _extendStatics(d, b);
-  };
-
-  return function (d, b) {
-    _extendStatics(d, b);
-
-    function __() {
-      this.constructor = d;
-    }
-
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-  };
-}();
-
-var __decorate = this && this.__decorate || function (decorators, target, key, desc) {
-  var c = arguments.length,
-      r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
-      d;
-  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
-    if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-  }
-  return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-var __importDefault = this && this.__importDefault || function (mod) {
-  return mod && mod.__esModule ? mod : {
-    "default": mod
-  };
-};
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-/* global nodecg */
-
-var vue_property_decorator_1 = require("vue-property-decorator");
-
-var ImportButtonComponent_vue_1 = __importDefault(require("./ImportButtonComponent.vue"));
-
-var ImportAreaComponent =
-/** @class */
-function (_super) {
-  __extends(ImportAreaComponent, _super);
-
-  function ImportAreaComponent() {
-    var _this = _super !== null && _super.apply(this, arguments) || this;
-
-    _this.channelName = nodecg.bundleConfig.defaultChannel;
-    _this.sortKey = 'title';
-    _this.startDate = new Date().toISOString().substring(0, 10);
-    _this.startEnable = false;
-    _this.endDate = new Date().toISOString().substring(0, 10);
-    _this.endEnable = false;
-    _this.clipLength = 20;
-    return _this;
-  }
-
-  ImportAreaComponent = __decorate([vue_property_decorator_1.Component({
-    components: {
-      ImportButton: ImportButtonComponent_vue_1.default
-    }
-  })], ImportAreaComponent);
-  return ImportAreaComponent;
-}(vue_property_decorator_1.Vue);
-
-exports.default = ImportAreaComponent;
-        var $49778c = exports.default || module.exports;
-      
-      if (typeof $49778c === 'function') {
-        $49778c = $49778c.options;
-      }
-    
-        /* template */
-        Object.assign($49778c, (function () {
-          var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "v-card",
+    {
+      attrs: { block: "", disabled: _vm.clip === null },
+      on: { click: _vm.transition }
+    },
     [
-      _c(
-        "v-card-text",
-        [
-          _c(
-            "div",
-            { staticClass: "mb-4" },
-            [
-              _c("v-text-field", {
-                attrs: {
-                  label: "Twitchチャンネル名",
-                  prefix: "https://twitch.tv/"
-                },
-                model: {
-                  value: _vm.channelName,
-                  callback: function($$v) {
-                    _vm.channelName = $$v
-                  },
-                  expression: "channelName"
-                }
-              }),
-              _vm._v(" "),
-              _c("v-select", {
-                staticClass: "ml-4",
-                attrs: {
-                  "hide-details": "",
-                  label: "クリップ取得時のソートキー",
-                  items: [
-                    { text: "タイトル", value: "title" },
-                    { text: "視聴回数", value: "viewCount" }
-                  ]
-                },
-                model: {
-                  value: _vm.sortKey,
-                  callback: function($$v) {
-                    _vm.sortKey = $$v
-                  },
-                  expression: "sortKey"
-                }
-              }),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "my-4" },
-                [
-                  _c(
-                    "v-menu",
-                    {
-                      attrs: {
-                        "close-on-content-click": false,
-                        "nudge-right": 40,
-                        transition: "scale-transition",
-                        "offset-y": "",
-                        "min-width": "290px"
-                      },
-                      scopedSlots: _vm._u([
-                        {
-                          key: "activator",
-                          fn: function(ref) {
-                            var on = ref.on
-                            var attrs = ref.attrs
-                            return [
-                              _c(
-                                "v-text-field",
-                                _vm._g(
-                                  _vm._b(
-                                    {
-                                      attrs: {
-                                        label: "検索開始日",
-                                        "prepend-icon": "fas fa-calendar-day",
-                                        readonly: "",
-                                        "hide-details": ""
-                                      },
-                                      model: {
-                                        value: _vm.startDate,
-                                        callback: function($$v) {
-                                          _vm.startDate = $$v
-                                        },
-                                        expression: "startDate"
-                                      }
-                                    },
-                                    "v-text-field",
-                                    attrs,
-                                    false
-                                  ),
-                                  on
-                                )
-                              )
-                            ]
-                          }
-                        }
-                      ]),
-                      model: {
-                        value: _vm.startEnable,
-                        callback: function($$v) {
-                          _vm.startEnable = $$v
-                        },
-                        expression: "startEnable"
-                      }
-                    },
-                    [
-                      _vm._v(" "),
-                      _c("v-date-picker", {
-                        attrs: { color: "grey", locale: "ja" },
-                        on: { input: _vm.startEnable },
-                        model: {
-                          value: _vm.startDate,
-                          callback: function($$v) {
-                            _vm.startDate = $$v
-                          },
-                          expression: "startDate"
-                        }
-                      })
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-menu",
-                    {
-                      attrs: {
-                        "close-on-content-click": false,
-                        "nudge-right": 40,
-                        transition: "scale-transition",
-                        "offset-y": "",
-                        "min-width": "290px"
-                      },
-                      scopedSlots: _vm._u([
-                        {
-                          key: "activator",
-                          fn: function(ref) {
-                            var on = ref.on
-                            var attrs = ref.attrs
-                            return [
-                              _c(
-                                "v-text-field",
-                                _vm._g(
-                                  _vm._b(
-                                    {
-                                      attrs: {
-                                        label: "検索終了日",
-                                        "prepend-icon": "fas fa-calendar-day",
-                                        readonly: "",
-                                        "hide-details": ""
-                                      },
-                                      model: {
-                                        value: _vm.endDate,
-                                        callback: function($$v) {
-                                          _vm.endDate = $$v
-                                        },
-                                        expression: "endDate"
-                                      }
-                                    },
-                                    "v-text-field",
-                                    attrs,
-                                    false
-                                  ),
-                                  on
-                                )
-                              )
-                            ]
-                          }
-                        }
-                      ]),
-                      model: {
-                        value: _vm.endEnable,
-                        callback: function($$v) {
-                          _vm.endEnable = $$v
-                        },
-                        expression: "endEnable"
-                      }
-                    },
-                    [
-                      _vm._v(" "),
-                      _c("v-date-picker", {
-                        attrs: { color: "grey", locale: "ja" },
-                        on: { input: _vm.endEnable },
-                        model: {
-                          value: _vm.endDate,
-                          callback: function($$v) {
-                            _vm.endDate = $$v
-                          },
-                          expression: "endDate"
-                        }
-                      })
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c("v-text-field", {
-                attrs: { label: "検索数", max: "100" },
-                model: {
-                  value: _vm.clipLength,
-                  callback: function($$v) {
-                    _vm.clipLength = _vm._n($$v)
-                  },
-                  expression: "clipLength"
-                }
-              })
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c("import-button", {
-            attrs: {
-              channel: _vm.channelName,
-              "sort-key": _vm.sortKey,
-              start: _vm.startDate,
-              end: _vm.endDate,
-              "clip-length": _vm.clipLength
-            }
-          })
-        ],
-        1
-      )
+      _c("v-icon", { attrs: { left: "" } }, [
+        _vm._v("\n    fas fa-caret-up\n  ")
+      ]),
+      _vm._v(" " + _vm._s(_vm.clip !== null ? _vm.clip.title : "") + "\n")
     ],
     1
   )
@@ -52523,16 +52170,146 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$49778c', $49778c);
+            api.createRecord('$aa6fa4', $aa6fa4);
           } else {
-            api.reload('$49778c', $49778c);
+            api.reload('$aa6fa4', $aa6fa4);
           }
         }
 
         
       }
     })();
-},{"vue-property-decorator":"../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","./ImportButtonComponent.vue":"import-clip/components/ImportButtonComponent.vue","vue-hot-reload-api":"../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../node_modules/vue/dist/vue.runtime.esm.js"}],"_lib/components/LabeledTextComponent.vue":[function(require,module,exports) {
+},{"vue-property-decorator":"../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","vue-hot-reload-api":"../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../node_modules/vue/dist/vue.runtime.esm.js"}],"current-control/components/NextClipButtonComponent.vue":[function(require,module,exports) {
+"use strict";
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var __extends = this && this.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (b.hasOwnProperty(p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+var __decorate = this && this.__decorate || function (decorators, target, key, desc) {
+  var c = arguments.length,
+      r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+      d;
+  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+    if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+  }
+  return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/* global nodecg */
+
+var vue_property_decorator_1 = require("vue-property-decorator");
+
+var NextClipButtonComponent =
+/** @class */
+function (_super) {
+  __extends(NextClipButtonComponent, _super);
+
+  function NextClipButtonComponent() {
+    return _super !== null && _super.apply(this, arguments) || this;
+  }
+
+  NextClipButtonComponent.prototype.transition = function () {
+    if (this.clip === null) {
+      return;
+    }
+
+    nodecg.sendMessage('transitionTo', this.clip.id);
+  };
+
+  __decorate([vue_property_decorator_1.Prop(Object)], NextClipButtonComponent.prototype, "clip", void 0);
+
+  __decorate([vue_property_decorator_1.Emit()], NextClipButtonComponent.prototype, "transition", null);
+
+  NextClipButtonComponent = __decorate([vue_property_decorator_1.Component], NextClipButtonComponent);
+  return NextClipButtonComponent;
+}(vue_property_decorator_1.Vue);
+
+exports.default = NextClipButtonComponent;
+        var $5f1984 = exports.default || module.exports;
+      
+      if (typeof $5f1984 === 'function') {
+        $5f1984 = $5f1984.options;
+      }
+    
+        /* template */
+        Object.assign($5f1984, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-btn",
+    {
+      attrs: { block: "", disabled: _vm.clip === null },
+      on: { click: _vm.transition }
+    },
+    [
+      _c("v-icon", { attrs: { left: "" } }, [
+        _vm._v("\n    fas fa-caret-down\n  ")
+      ]),
+      _vm._v(" " + _vm._s(_vm.clip !== null ? _vm.clip.title : "") + "\n")
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$5f1984', $5f1984);
+          } else {
+            api.reload('$5f1984', $5f1984);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-property-decorator":"../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","vue-hot-reload-api":"../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../node_modules/vue/dist/vue.runtime.esm.js"}],"_lib/components/LabeledTextComponent.vue":[function(require,module,exports) {
 "use strict";
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -54962,7 +54739,7 @@ var clone = function () {
 if (typeof module === 'object' && module.exports) {
   module.exports = clone;
 }
-},{"buffer":"../../../node_modules/buffer/index.js"}],"import-clip/components/ClipListElementComponent.vue":[function(require,module,exports) {
+},{"buffer":"../../../node_modules/buffer/index.js"}],"current-control/components/CurrentClipComponent.vue":[function(require,module,exports) {
 "use strict";
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -55020,19 +54797,19 @@ var LabeledTextComponent_vue_1 = __importDefault(require("../../_lib/components/
 
 var clone_1 = __importDefault(require("clone"));
 
-var ClipListElementComponent =
+var CurrentClipComponent =
 /** @class */
 function (_super) {
-  __extends(ClipListElementComponent, _super);
+  __extends(CurrentClipComponent, _super);
 
-  function ClipListElementComponent() {
+  function CurrentClipComponent() {
     var _this = _super !== null && _super.apply(this, arguments) || this;
 
     _this.games = [];
     return _this;
   }
 
-  ClipListElementComponent.prototype.created = function () {
+  CurrentClipComponent.prototype.created = function () {
     var _this = this;
 
     nodecg.Replicant('twitchGameArray').on('change', function (newVal) {
@@ -55040,7 +54817,7 @@ function (_super) {
     });
   };
 
-  ClipListElementComponent.prototype.getGameName = function (id) {
+  CurrentClipComponent.prototype.getGameName = function (id) {
     var _a;
 
     return ((_a = this.games.find(function (game) {
@@ -55048,152 +54825,97 @@ function (_super) {
     })) === null || _a === void 0 ? void 0 : _a.name) || '';
   };
 
-  ClipListElementComponent.prototype.enable = function () {
-    nodecg.sendMessage('enableClip', this.data.id);
-  };
+  __decorate([vue_property_decorator_1.Prop(Object)], CurrentClipComponent.prototype, "clip", void 0);
 
-  ClipListElementComponent.prototype.disable = function () {
-    nodecg.sendMessage('disableClip', this.data.id);
-  };
+  __decorate([vue_property_decorator_1.Prop(Object)], CurrentClipComponent.prototype, "state", void 0);
 
-  __decorate([vue_property_decorator_1.Prop(Number)], ClipListElementComponent.prototype, "index", void 0);
-
-  __decorate([vue_property_decorator_1.Prop(Object)], ClipListElementComponent.prototype, "data", void 0);
-
-  __decorate([vue_property_decorator_1.Prop(Object)], ClipListElementComponent.prototype, "clipState", void 0);
-
-  __decorate([vue_property_decorator_1.Emit()], ClipListElementComponent.prototype, "enable", null);
-
-  __decorate([vue_property_decorator_1.Emit()], ClipListElementComponent.prototype, "disable", null);
-
-  ClipListElementComponent = __decorate([vue_property_decorator_1.Component({
+  CurrentClipComponent = __decorate([vue_property_decorator_1.Component({
     components: {
       LabeledText: LabeledTextComponent_vue_1.default
     }
-  })], ClipListElementComponent);
-  return ClipListElementComponent;
+  })], CurrentClipComponent);
+  return CurrentClipComponent;
 }(vue_property_decorator_1.Vue);
 
-exports.default = ClipListElementComponent;
-        var $fbd067 = exports.default || module.exports;
+exports.default = CurrentClipComponent;
+        var $76aeb4 = exports.default || module.exports;
       
-      if (typeof $fbd067 === 'function') {
-        $fbd067 = $fbd067.options;
+      if (typeof $76aeb4 === 'function') {
+        $76aeb4 = $76aeb4.options;
       }
     
         /* template */
-        Object.assign($fbd067, (function () {
+        Object.assign($76aeb4, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "v-expansion-panel",
+    "v-card",
     [
       _c(
-        "v-expansion-panel-header",
-        { staticClass: "py-2" },
+        "v-card-text",
         [
           _c(
-            "v-row",
+            "v-sheet",
             {
-              class: { "grey--text": _vm.clipState.disabled },
-              attrs: { align: "center", "no-gutters": "" }
+              staticClass: "text-center font-weight-bold mb-2 pa-2",
+              attrs: { color: "info" }
             },
-            [
-              _c(
-                "v-col",
-                { staticClass: "mx-2", attrs: { cols: "2", md: "1" } },
-                [
-                  _c("v-img", {
-                    attrs: { src: _vm.data.thumbnailUrl, alt: "icon" }
-                  })
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-col",
-                [
-                  _c("v-chip", { attrs: { color: "secondary", label: "" } }, [
-                    _vm._v(
-                      "\n          " +
-                        _vm._s(_vm.clipState.rank || "-") +
-                        "\n        "
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("strong", [_vm._v(_vm._s(_vm.data.title))])
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-col",
-                { attrs: { cols: "1" } },
-                [
-                  _c(
-                    "transition",
-                    { attrs: { name: "disabled" } },
-                    [
-                      _vm.clipState.disabled
-                        ? _c("v-icon", [
-                            _vm._v("\n            fas fa-times\n          ")
-                          ])
-                        : _vm._e()
-                    ],
-                    1
-                  )
-                ],
-                1
-              )
-            ],
-            1
+            [_c("h2", [_vm._v(_vm._s(_vm.state.rank) + "位")])]
           )
         ],
         1
       ),
       _vm._v(" "),
       _c(
-        "v-expansion-panel-content",
+        "v-row",
+        { attrs: { align: "center" } },
+        [
+          _c(
+            "v-col",
+            { attrs: { cols: "4" } },
+            [
+              _c(
+                "v-card-text",
+                [
+                  _c("v-img", {
+                    attrs: {
+                      src:
+                        "https://clips-media-assets2.twitch.tv/AT-cm%7C773261758-preview-480x272.jpg"
+                    }
+                  })
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("v-col", [_c("v-card-title", [_vm._v(_vm._s(_vm.clip.title))])], 1)
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-card-text",
+        { staticClass: "text--primary" },
         [
           _c("labeled-text", { attrs: { label: "ゲーム" } }, [
             _vm._v(
-              "\n      " + _vm._s(_vm.getGameName(_vm.data.gameId)) + "\n    "
+              "\n      " + _vm._s(_vm.getGameName(_vm.clip.gameId)) + "\n    "
             )
           ]),
           _vm._v(" "),
           _c("labeled-text", { attrs: { label: "視聴回数" } }, [
-            _vm._v("\n      " + _vm._s(_vm.data.viewCount) + "\n    ")
+            _vm._v("\n      " + _vm._s(_vm.clip.viewCount) + "\n    ")
           ]),
           _vm._v(" "),
           _c("labeled-text", { attrs: { label: "リンク" } }, [
-            _c("a", { attrs: { href: _vm.data.url, target: "_blank" } }, [
-              _vm._v(_vm._s(_vm.data.id))
+            _c("a", { attrs: { href: _vm.clip.url, target: "_blank" } }, [
+              _vm._v(_vm._s(_vm.clip.id))
             ])
-          ]),
-          _vm._v(" "),
-          _c(
-            "v-row",
-            { attrs: { justify: "end" } },
-            [
-              !_vm.clipState.disabled
-                ? _c(
-                    "v-btn",
-                    {
-                      attrs: { color: "secondary" },
-                      on: { click: _vm.disable }
-                    },
-                    [_vm._v("\n        無効化\n      ")]
-                  )
-                : _c(
-                    "v-btn",
-                    { attrs: { color: "success" }, on: { click: _vm.enable } },
-                    [_vm._v("\n        有効化\n      ")]
-                  )
-            ],
-            1
-          )
+          ])
         ],
         1
       )
@@ -55208,7 +54930,7 @@ render._withStripped = true
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-            _scopeId: "data-v-fbd067",
+            _scopeId: null,
             functional: undefined
           };
         })());
@@ -55221,20 +54943,16 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$fbd067', $fbd067);
+            api.createRecord('$76aeb4', $76aeb4);
           } else {
-            api.reload('$fbd067', $fbd067);
+            api.reload('$76aeb4', $76aeb4);
           }
         }
 
         
-        var reloadCSS = require('_css_loader');
-        module.hot.dispose(reloadCSS);
-        module.hot.accept(reloadCSS);
-      
       }
     })();
-},{"vue-property-decorator":"../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","../../_lib/components/LabeledTextComponent.vue":"_lib/components/LabeledTextComponent.vue","clone":"../../../node_modules/clone/clone.js","_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../node_modules/vue/dist/vue.runtime.esm.js"}],"import-clip/components/ClipListComponent.vue":[function(require,module,exports) {
+},{"vue-property-decorator":"../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","../../_lib/components/LabeledTextComponent.vue":"_lib/components/LabeledTextComponent.vue","clone":"../../../node_modules/clone/clone.js","vue-hot-reload-api":"../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../node_modules/vue/dist/vue.runtime.esm.js"}],"current-control/main.vue":[function(require,module,exports) {
 "use strict";
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -55288,305 +55006,13 @@ Object.defineProperty(exports, "__esModule", {
 
 var vue_property_decorator_1 = require("vue-property-decorator");
 
-var ClipListElementComponent_vue_1 = __importDefault(require("./ClipListElementComponent.vue"));
+var PrevClipButtonComponent_vue_1 = __importDefault(require("./components/PrevClipButtonComponent.vue"));
+
+var NextClipButtonComponent_vue_1 = __importDefault(require("./components/NextClipButtonComponent.vue"));
+
+var CurrentClipComponent_vue_1 = __importDefault(require("./components/CurrentClipComponent.vue"));
 
 var clone_1 = __importDefault(require("clone"));
-
-var ClipListComponent =
-/** @class */
-function (_super) {
-  __extends(ClipListComponent, _super);
-
-  function ClipListComponent() {
-    var _this = _super !== null && _super.apply(this, arguments) || this;
-
-    _this.clipStates = [];
-    return _this;
-  }
-
-  ClipListComponent.prototype.created = function () {
-    var _this = this;
-
-    nodecg.Replicant('twitchClipStateArray').on('change', function (newVal) {
-      _this.clipStates = clone_1.default(newVal);
-    });
-  };
-
-  ClipListComponent.prototype.getClipState = function (id) {
-    var state = this.clipStates.find(function (state) {
-      return state.id === id;
-    });
-
-    if (!state) {
-      return {
-        id: '',
-        disabled: false,
-        rank: 0
-      };
-    }
-
-    return state;
-  };
-
-  __decorate([vue_property_decorator_1.Prop(Array)], ClipListComponent.prototype, "clips", void 0);
-
-  ClipListComponent = __decorate([vue_property_decorator_1.Component({
-    components: {
-      ClipListElement: ClipListElementComponent_vue_1.default
-    }
-  })], ClipListComponent);
-  return ClipListComponent;
-}(vue_property_decorator_1.Vue);
-
-exports.default = ClipListComponent;
-        var $93eca3 = exports.default || module.exports;
-      
-      if (typeof $93eca3 === 'function') {
-        $93eca3 = $93eca3.options;
-      }
-    
-        /* template */
-        Object.assign($93eca3, (function () {
-          var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "v-expansion-panels",
-    _vm._l(_vm.clips, function(clip) {
-      return _c("clip-list-element", {
-        key: clip.id,
-        attrs: { data: clip, "clip-state": _vm.getClipState(clip.id) }
-      })
-    }),
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: null,
-            functional: undefined
-          };
-        })());
-      
-    /* hot reload */
-    (function () {
-      if (module.hot) {
-        var api = require('vue-hot-reload-api');
-        api.install(require('vue'));
-        if (api.compatible) {
-          module.hot.accept();
-          if (!module.hot.data) {
-            api.createRecord('$93eca3', $93eca3);
-          } else {
-            api.reload('$93eca3', $93eca3);
-          }
-        }
-
-        
-      }
-    })();
-},{"vue-property-decorator":"../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","./ClipListElementComponent.vue":"import-clip/components/ClipListElementComponent.vue","clone":"../../../node_modules/clone/clone.js","vue-hot-reload-api":"../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../node_modules/vue/dist/vue.runtime.esm.js"}],"import-clip/components/ClipAreaComponent.vue":[function(require,module,exports) {
-"use strict";
-
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-var __extends = this && this.__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
-      __proto__: []
-    } instanceof Array && function (d, b) {
-      d.__proto__ = b;
-    } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
-    };
-
-    return _extendStatics(d, b);
-  };
-
-  return function (d, b) {
-    _extendStatics(d, b);
-
-    function __() {
-      this.constructor = d;
-    }
-
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-  };
-}();
-
-var __decorate = this && this.__decorate || function (decorators, target, key, desc) {
-  var c = arguments.length,
-      r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
-      d;
-  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
-    if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-  }
-  return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-var __importDefault = this && this.__importDefault || function (mod) {
-  return mod && mod.__esModule ? mod : {
-    "default": mod
-  };
-};
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-/* global nodecg */
-
-var vue_property_decorator_1 = require("vue-property-decorator");
-
-var ClipListComponent_vue_1 = __importDefault(require("./ClipListComponent.vue"));
-
-var clone = require("clone");
-
-var ClipAreaComponent =
-/** @class */
-function (_super) {
-  __extends(ClipAreaComponent, _super);
-
-  function ClipAreaComponent() {
-    var _this = _super !== null && _super.apply(this, arguments) || this;
-
-    _this.clips = [];
-    return _this;
-  }
-
-  ClipAreaComponent.prototype.created = function () {
-    var _this = this;
-
-    nodecg.Replicant('twitchClipArray').on('change', function (newVal) {
-      _this.clips = clone(newVal);
-    });
-  };
-
-  ClipAreaComponent = __decorate([vue_property_decorator_1.Component({
-    components: {
-      ClipList: ClipListComponent_vue_1.default
-    }
-  })], ClipAreaComponent);
-  return ClipAreaComponent;
-}(vue_property_decorator_1.Vue);
-
-exports.default = ClipAreaComponent;
-        var $b4a0b8 = exports.default || module.exports;
-      
-      if (typeof $b4a0b8 === 'function') {
-        $b4a0b8 = $b4a0b8.options;
-      }
-    
-        /* template */
-        Object.assign($b4a0b8, (function () {
-          var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _vm.clips.length > 0
-        ? _c("clip-list", { attrs: { clips: _vm.clips } })
-        : _c("v-alert", { attrs: { color: "dark", dark: "" } }, [
-            _vm._v("\n    読み込まれたクリップはありません。\n  ")
-          ])
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: null,
-            functional: undefined
-          };
-        })());
-      
-    /* hot reload */
-    (function () {
-      if (module.hot) {
-        var api = require('vue-hot-reload-api');
-        api.install(require('vue'));
-        if (api.compatible) {
-          module.hot.accept();
-          if (!module.hot.data) {
-            api.createRecord('$b4a0b8', $b4a0b8);
-          } else {
-            api.reload('$b4a0b8', $b4a0b8);
-          }
-        }
-
-        
-      }
-    })();
-},{"vue-property-decorator":"../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","./ClipListComponent.vue":"import-clip/components/ClipListComponent.vue","clone":"../../../node_modules/clone/clone.js","vue-hot-reload-api":"../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../node_modules/vue/dist/vue.runtime.esm.js"}],"import-clip/main.vue":[function(require,module,exports) {
-"use strict";
-
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-var __extends = this && this.__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
-      __proto__: []
-    } instanceof Array && function (d, b) {
-      d.__proto__ = b;
-    } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
-    };
-
-    return _extendStatics(d, b);
-  };
-
-  return function (d, b) {
-    _extendStatics(d, b);
-
-    function __() {
-      this.constructor = d;
-    }
-
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-  };
-}();
-
-var __decorate = this && this.__decorate || function (decorators, target, key, desc) {
-  var c = arguments.length,
-      r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
-      d;
-  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
-    if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-  }
-  return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-var __importDefault = this && this.__importDefault || function (mod) {
-  return mod && mod.__esModule ? mod : {
-    "default": mod
-  };
-};
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var vue_property_decorator_1 = require("vue-property-decorator");
-
-var ImportAreaComponent_vue_1 = __importDefault(require("./components/ImportAreaComponent.vue"));
-
-var ClipAreaComponent_vue_1 = __importDefault(require("./components/ClipAreaComponent.vue"));
 
 var App =
 /** @class */
@@ -55594,27 +55020,117 @@ function (_super) {
   __extends(App, _super);
 
   function App() {
-    return _super !== null && _super.apply(this, arguments) || this;
+    var _this = _super !== null && _super.apply(this, arguments) || this;
+
+    _this.currentClip = null;
+    _this.clips = [];
+    _this.clipStates = [];
+    return _this;
   }
+
+  App.prototype.created = function () {
+    var _this = this;
+
+    nodecg.Replicant('twitchClipArray').on('change', function (newVal) {
+      _this.clips = clone_1.default(newVal);
+    });
+    nodecg.Replicant('currentTwitchClip').on('change', function (currentId) {
+      var currentClip = _this.clips.find(function (clip) {
+        return clip.id === currentId;
+      });
+
+      if (!currentClip) {
+        _this.currentClip = null;
+        return;
+      }
+
+      _this.currentClip = currentClip;
+    });
+    nodecg.Replicant('twitchClipStateArray').on('change', function (newVal) {
+      _this.clipStates = clone_1.default(newVal);
+    });
+  };
+
+  Object.defineProperty(App.prototype, "prevClip", {
+    get: function get() {
+      if (this.currentClip === null) {
+        return null;
+      }
+
+      var currentRank = this.getState(this.currentClip.id).rank;
+
+      if (currentRank === null) {
+        return null;
+      }
+
+      return this.findClipRankedAt(currentRank - 1);
+    },
+    enumerable: true,
+    configurable: true
+  });
+  Object.defineProperty(App.prototype, "nextClip", {
+    get: function get() {
+      if (this.currentClip === null) {
+        return null;
+      }
+
+      var currentRank = this.getState(this.currentClip.id).rank;
+
+      if (currentRank === null) {
+        return null;
+      }
+
+      return this.findClipRankedAt(currentRank + 1);
+    },
+    enumerable: true,
+    configurable: true
+  });
+
+  App.prototype.getState = function (id) {
+    return this.clipStates.find(function (state) {
+      return state.id === id;
+    }) || {
+      id: '',
+      rank: null,
+      disabled: false
+    };
+  };
+
+  App.prototype.findClipRankedAt = function (rank) {
+    var _a;
+
+    var id = (_a = this.clipStates.find(function (state) {
+      return state.rank === rank;
+    })) === null || _a === void 0 ? void 0 : _a.id;
+
+    if (!id) {
+      return null;
+    }
+
+    return this.clips.find(function (clip) {
+      return clip.id === id;
+    }) || null;
+  };
 
   App = __decorate([vue_property_decorator_1.Component({
     components: {
-      ImportArea: ImportAreaComponent_vue_1.default,
-      ClipArea: ClipAreaComponent_vue_1.default
+      PrevClipButton: PrevClipButtonComponent_vue_1.default,
+      NextClipButton: NextClipButtonComponent_vue_1.default,
+      CurrentClip: CurrentClipComponent_vue_1.default
     }
   })], App);
   return App;
 }(vue_property_decorator_1.Vue);
 
 exports.default = App;
-        var $f30b4e = exports.default || module.exports;
+        var $66cb38 = exports.default || module.exports;
       
-      if (typeof $f30b4e === 'function') {
-        $f30b4e = $f30b4e.options;
+      if (typeof $66cb38 === 'function') {
+        $66cb38 = $66cb38.options;
       }
     
         /* template */
-        Object.assign($f30b4e, (function () {
+        Object.assign($66cb38, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -55622,26 +55138,27 @@ exports.default = App;
   return _c(
     "v-app",
     [
+      _c("prev-clip-button", { attrs: { clip: _vm.prevClip } }),
+      _vm._v(" "),
       _c(
-        "v-row",
+        "div",
+        { staticClass: "my-2" },
         [
-          _c("v-col", { attrs: { cols: "4" } }, [_c("import-area")], 1),
-          _vm._v(" "),
-          _c(
-            "v-col",
-            {
-              style: {
-                maxHeight: "680px",
-                overflowY: "auto"
-              },
-              attrs: { cols: "8" }
-            },
-            [_c("clip-area")],
-            1
-          )
+          _vm.currentClip !== null
+            ? _c("current-clip", {
+                attrs: {
+                  clip: _vm.currentClip,
+                  state: _vm.getState(_vm.currentClip.id)
+                }
+              })
+            : _c("v-alert", { attrs: { color: "dark", dark: "" } }, [
+                _vm._v("\n      クリップ情報なし\n    ")
+              ])
         ],
         1
-      )
+      ),
+      _vm._v(" "),
+      _c("next-clip-button", { attrs: { clip: _vm.nextClip } })
     ],
     1
   )
@@ -55666,16 +55183,16 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$f30b4e', $f30b4e);
+            api.createRecord('$66cb38', $66cb38);
           } else {
-            api.reload('$f30b4e', $f30b4e);
+            api.reload('$66cb38', $66cb38);
           }
         }
 
         
       }
     })();
-},{"vue-property-decorator":"../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","./components/ImportAreaComponent.vue":"import-clip/components/ImportAreaComponent.vue","./components/ClipAreaComponent.vue":"import-clip/components/ClipAreaComponent.vue","vue-hot-reload-api":"../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../node_modules/vue/dist/vue.runtime.esm.js"}],"import-clip/index.ts":[function(require,module,exports) {
+},{"vue-property-decorator":"../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","./components/PrevClipButtonComponent.vue":"current-control/components/PrevClipButtonComponent.vue","./components/NextClipButtonComponent.vue":"current-control/components/NextClipButtonComponent.vue","./components/CurrentClipComponent.vue":"current-control/components/CurrentClipComponent.vue","clone":"../../../node_modules/clone/clone.js","vue-hot-reload-api":"../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../node_modules/vue/dist/vue.runtime.esm.js"}],"current-control/index.ts":[function(require,module,exports) {
 "use strict";
 /* eslint no-new: off, @typescript-eslint/explicit-function-return-type: off */
 
@@ -55705,7 +55222,7 @@ new vue_1.default({
     return h(main_vue_1.default);
   }
 });
-},{"vue":"../../../node_modules/vue/dist/vue.runtime.esm.js","../../plugin/store":"../plugin/store.ts","../../plugin/vuetify":"../plugin/vuetify.ts","./main.vue":"import-clip/main.vue"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"vue":"../../../node_modules/vue/dist/vue.runtime.esm.js","../../plugin/store":"../plugin/store.ts","../../plugin/vuetify":"../plugin/vuetify.ts","./main.vue":"current-control/main.vue"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -55909,5 +55426,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","import-clip/index.ts"], null)
-//# sourceMappingURL=import-clip.bb5cb544.js.map
+},{}]},{},["../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","current-control/index.ts"], null)
+//# sourceMappingURL=current-control.e2a7af56.js.map

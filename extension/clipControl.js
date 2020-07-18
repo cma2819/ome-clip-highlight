@@ -19,6 +19,9 @@ exports.clipControl = function (nodecg) {
     var clipStateArrayReplicant = nodecg.Replicant('twitchClipStateArray', {
         defaultValue: []
     });
+    var currentClipReplicant = nodecg.Replicant('currentTwitchClip', {
+        defaultValue: null
+    });
     nodecg.listenFor('enableClip', function (id) {
         var clips = clipStateArrayReplicant.value;
         var clipState = clips.find(function (state) {
@@ -40,5 +43,8 @@ exports.clipControl = function (nodecg) {
             logger.info("Clip[" + id + "] becomes disabled.");
         }
         clipStateArrayReplicant.value = calcClipRank(clips);
+    });
+    nodecg.listenFor('transitionTo', function (id) {
+        currentClipReplicant.value = id;
     });
 };

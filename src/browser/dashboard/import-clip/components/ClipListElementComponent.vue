@@ -7,18 +7,14 @@
         no-gutters
       >
         <v-col
+          class="mx-2"
           cols="2"
           md="1"
         >
-          <v-avatar
-            tile
-            size="36"
-          >
-            <img
-              :src="data.thumbnailUrl"
-              alt="icon"
-            >
-          </v-avatar>
+          <v-img
+            :src="data.thumbnailUrl"
+            alt="icon"
+          ></v-img>
         </v-col>
         <v-col>          
           <v-chip
@@ -91,7 +87,7 @@ import { Vue, Component, Prop, Emit } from 'vue-property-decorator';
 import LabeledText from '../../_lib/components/LabeledTextComponent.vue';
 import { TwitchGameArray } from '../../../../nodecg/generated/twitchGameArray';
 import { TwitchClip } from '../../../../extension/types/twitchClip';
-import clone=require('clone');
+import clone from 'clone';
 import { ClipState } from '../../../../extension/types/clipState';
 
 @Component({
