@@ -84,6 +84,15 @@ export const twitch = async (nodecg: NodeCG): Promise<void> => {
       currentTwitchClipReplicant.value = sortedClips[0]?.id || null;
       logger.info(`Success to import clips from [${channel}].`);
       logger.info(`Imported ${sortedClips.length} clips with ${games.length} games.`);
+
+      nodecg.sendMessage('saveCondition', {
+        channelName: channel,
+        sortKey: sort,
+        startDate: start,
+        endDate: end,
+        clipLength: length
+      });
+      
     } catch (e) {
       const error = e as Error;
       logger.error('Failed to import clip.');

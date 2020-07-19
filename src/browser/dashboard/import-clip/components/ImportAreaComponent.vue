@@ -109,5 +109,17 @@ export default class ImportAreaComponent extends Vue {
   endEnable = false;
 
   clipLength = 20;
+
+  created(): void {
+    nodecg.readReplicant('importCondition', (condition) => {
+      if (condition) {
+        this.channelName = condition.channelName;
+        this.sortKey = condition.sortKey;
+        this.startDate = condition.startDate;
+        this.endDate = condition.endDate;
+        this.clipLength = condition.clipLength;
+      }
+    })
+  }
 }
 </script>

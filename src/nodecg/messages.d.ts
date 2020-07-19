@@ -1,3 +1,4 @@
+import { ImportCondition } from "./generated/importCondition";
 
 export type MessageMap = {
   'importClip': {
@@ -20,5 +21,9 @@ export type MessageMap = {
 
   'transitionTo': {
     data: string
+  }
+
+  'saveCondition': {
+    data: ImportCondition
   }
 };

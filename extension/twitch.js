@@ -92,6 +92,13 @@ exports.twitch = function (nodecg) { return tslib_1.__awaiter(void 0, void 0, vo
                             currentTwitchClipReplicant.value = ((_b = sortedClips[0]) === null || _b === void 0 ? void 0 : _b.id) || null;
                             logger.info("Success to import clips from [" + channel + "].");
                             logger.info("Imported " + sortedClips.length + " clips with " + games.length + " games.");
+                            nodecg.sendMessage('saveCondition', {
+                                channelName: channel,
+                                sortKey: sort,
+                                startDate: start,
+                                endDate: end,
+                                clipLength: length
+                            });
                             return [3 /*break*/, 7];
                         case 6:
                             e_1 = _c.sent();

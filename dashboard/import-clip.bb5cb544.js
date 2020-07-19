@@ -52258,6 +52258,20 @@ function (_super) {
     return _this;
   }
 
+  ImportAreaComponent.prototype.created = function () {
+    var _this = this;
+
+    nodecg.readReplicant('importCondition', function (condition) {
+      if (condition) {
+        _this.channelName = condition.channelName;
+        _this.sortKey = condition.sortKey;
+        _this.startDate = condition.startDate;
+        _this.endDate = condition.endDate;
+        _this.clipLength = condition.clipLength;
+      }
+    });
+  };
+
   ImportAreaComponent = __decorate([vue_property_decorator_1.Component({
     components: {
       ImportButton: ImportButtonComponent_vue_1.default
@@ -55750,7 +55764,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62613" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51488" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
