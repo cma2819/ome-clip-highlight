@@ -13,6 +13,7 @@ export default new Vuetify({
         iconfont: 'fa'
     },
     theme: {
+        dark: true,
         themes: {
             light: kusoge
         }
