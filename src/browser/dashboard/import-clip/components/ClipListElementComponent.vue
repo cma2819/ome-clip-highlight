@@ -49,6 +49,9 @@
           target="_blank"
         >{{ data.id }}</a>
       </labeled-text>
+      <labeled-text label="作者">
+        {{ data.creatorName }}
+      </labeled-text>
       <v-row justify="end">
         <v-btn
           v-if="!clipState.disabled"

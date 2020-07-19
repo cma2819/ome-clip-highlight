@@ -47,4 +47,7 @@ exports.clipControl = function (nodecg) {
     nodecg.listenFor('transitionTo', function (id) {
         currentClipReplicant.value = id;
     });
+    nodecg.listenFor('deactivateCurrent', function () {
+        currentClipReplicant.value = null;
+    });
 };

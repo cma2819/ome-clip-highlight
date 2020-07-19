@@ -51071,6 +51071,7 @@ exports.default = new vuetify_1.default({
     iconfont: 'fa'
   },
   theme: {
+    dark: true,
     themes: {
       light: kusoge_1.default
     }
@@ -54924,6 +54925,10 @@ exports.default = CurrentClipComponent;
             _c("a", { attrs: { href: _vm.clip.url, target: "_blank" } }, [
               _vm._v(_vm._s(_vm.clip.id))
             ])
+          ]),
+          _vm._v(" "),
+          _c("labeled-text", { attrs: { label: "作者" } }, [
+            _vm._v("\n      " + _vm._s(_vm.clip.creatorName) + "\n    ")
           ])
         ],
         1
@@ -54961,7 +54966,122 @@ render._withStripped = true
         
       }
     })();
-},{"vue-property-decorator":"../../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","../../_lib/components/LabeledTextComponent.vue":"_lib/components/LabeledTextComponent.vue","clone":"../../../../node_modules/clone/clone.js","vue-hot-reload-api":"../../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../../node_modules/vue/dist/vue.runtime.esm.js"}],"current-control/main.vue":[function(require,module,exports) {
+},{"vue-property-decorator":"../../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","../../_lib/components/LabeledTextComponent.vue":"_lib/components/LabeledTextComponent.vue","clone":"../../../../node_modules/clone/clone.js","vue-hot-reload-api":"../../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../../node_modules/vue/dist/vue.runtime.esm.js"}],"current-control/components/CurrentDeactivateComponent.vue":[function(require,module,exports) {
+"use strict";
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var __extends = this && this.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (b.hasOwnProperty(p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+var __decorate = this && this.__decorate || function (decorators, target, key, desc) {
+  var c = arguments.length,
+      r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+      d;
+  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+    if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+  }
+  return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/* global nodecg */
+
+var vue_property_decorator_1 = require("vue-property-decorator");
+
+var CurentDeactivateComponent =
+/** @class */
+function (_super) {
+  __extends(CurentDeactivateComponent, _super);
+
+  function CurentDeactivateComponent() {
+    return _super !== null && _super.apply(this, arguments) || this;
+  }
+
+  CurentDeactivateComponent.prototype.deactivate = function () {
+    nodecg.sendMessage('deactivateCurrent');
+  };
+
+  __decorate([vue_property_decorator_1.Emit()], CurentDeactivateComponent.prototype, "deactivate", null);
+
+  CurentDeactivateComponent = __decorate([vue_property_decorator_1.Component], CurentDeactivateComponent);
+  return CurentDeactivateComponent;
+}(vue_property_decorator_1.Vue);
+
+exports.default = CurentDeactivateComponent;
+        var $bb4244 = exports.default || module.exports;
+      
+      if (typeof $bb4244 === 'function') {
+        $bb4244 = $bb4244.options;
+      }
+    
+        /* template */
+        Object.assign($bb4244, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-btn",
+    { attrs: { color: "warning", block: "" }, on: { click: _vm.deactivate } },
+    [_vm._v("\n  クリップ非表示\n")]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$bb4244', $bb4244);
+          } else {
+            api.reload('$bb4244', $bb4244);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-property-decorator":"../../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","vue-hot-reload-api":"../../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../../node_modules/vue/dist/vue.runtime.esm.js"}],"current-control/main.vue":[function(require,module,exports) {
 "use strict";
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -55020,6 +55140,8 @@ var PrevClipButtonComponent_vue_1 = __importDefault(require("./components/PrevCl
 var NextClipButtonComponent_vue_1 = __importDefault(require("./components/NextClipButtonComponent.vue"));
 
 var CurrentClipComponent_vue_1 = __importDefault(require("./components/CurrentClipComponent.vue"));
+
+var CurrentDeactivateComponent_vue_1 = __importDefault(require("./components/CurrentDeactivateComponent.vue"));
 
 var clone_1 = __importDefault(require("clone"));
 
@@ -55125,7 +55247,8 @@ function (_super) {
     components: {
       PrevClipButton: PrevClipButtonComponent_vue_1.default,
       NextClipButton: NextClipButtonComponent_vue_1.default,
-      CurrentClip: CurrentClipComponent_vue_1.default
+      CurrentClip: CurrentClipComponent_vue_1.default,
+      DeactivateButton: CurrentDeactivateComponent_vue_1.default
     }
   })], App);
   return App;
@@ -55167,7 +55290,14 @@ exports.default = App;
         1
       ),
       _vm._v(" "),
-      _c("next-clip-button", { attrs: { clip: _vm.nextClip } })
+      _c("next-clip-button", { attrs: { clip: _vm.nextClip } }),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "my-2" },
+        [_vm.currentClip ? _c("deactivate-button") : _vm._e()],
+        1
+      )
     ],
     1
   )
@@ -55201,7 +55331,7 @@ render._withStripped = true
         
       }
     })();
-},{"vue-property-decorator":"../../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","./components/PrevClipButtonComponent.vue":"current-control/components/PrevClipButtonComponent.vue","./components/NextClipButtonComponent.vue":"current-control/components/NextClipButtonComponent.vue","./components/CurrentClipComponent.vue":"current-control/components/CurrentClipComponent.vue","clone":"../../../../node_modules/clone/clone.js","vue-hot-reload-api":"../../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../../node_modules/vue/dist/vue.runtime.esm.js"}],"current-control/index.ts":[function(require,module,exports) {
+},{"vue-property-decorator":"../../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","./components/PrevClipButtonComponent.vue":"current-control/components/PrevClipButtonComponent.vue","./components/NextClipButtonComponent.vue":"current-control/components/NextClipButtonComponent.vue","./components/CurrentClipComponent.vue":"current-control/components/CurrentClipComponent.vue","./components/CurrentDeactivateComponent.vue":"current-control/components/CurrentDeactivateComponent.vue","clone":"../../../../node_modules/clone/clone.js","vue-hot-reload-api":"../../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../../node_modules/vue/dist/vue.runtime.esm.js"}],"current-control/index.ts":[function(require,module,exports) {
 "use strict";
 /* eslint no-new: off, @typescript-eslint/explicit-function-return-type: off */
 
@@ -55259,7 +55389,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57081" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55195" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

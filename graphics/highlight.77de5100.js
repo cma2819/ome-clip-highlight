@@ -51071,6 +51071,7 @@ exports.default = new vuetify_1.default({
     iconfont: 'fa'
   },
   theme: {
+    dark: true,
     themes: {
       light: kusoge_1.default
     }
@@ -52157,7 +52158,8 @@ exports.default = EventLogo;
       width: "100%",
       height: "100%",
       backgroundImage: "url(" + _vm.logoUri + ")",
-      backgroundSize: "contain"
+      backgroundSize: "contain",
+      backgroundPosition: "center"
     }
   })
 }
@@ -52622,6 +52624,8 @@ function (_super) {
 
   __decorate([vue_property_decorator_1.Prop(String)], HighlightTitleComponent.prototype, "title", void 0);
 
+  __decorate([vue_property_decorator_1.Prop(String)], HighlightTitleComponent.prototype, "creator", void 0);
+
   HighlightTitleComponent = __decorate([vue_property_decorator_1.Component], HighlightTitleComponent);
   return HighlightTitleComponent;
 }(vue_property_decorator_1.Vue);
@@ -52639,7 +52643,20 @@ exports.default = HighlightTitleComponent;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n  " + _vm._s(_vm.title) + "\n")])
+  return _c("div", { attrs: { id: "root" } }, [
+    _c("div", [_vm._v("\n    " + _vm._s(_vm.title) + "\n  ")]),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        style: {
+          fontSize: "60%",
+          marginTop: "1rem"
+        }
+      },
+      [_vm._v("\n    作：" + _vm._s(_vm.creator) + "\n  ")]
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -55125,18 +55142,18 @@ exports.default = App;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm.currentClip
-    ? _c(
-        "overlay-base",
-        [
-          _c("transition", { attrs: { name: "thumbnail", mode: "out-in" } }, [
-            _c(
+  return _c(
+    "overlay-base",
+    [
+      _c("transition", { attrs: { name: "thumbnail", mode: "out-in" } }, [
+        _vm.currentClip
+          ? _c(
               "div",
               {
                 key: _vm.currentClip.id,
                 style: {
                   position: "absolute",
-                  top: "180px",
+                  top: "200px",
                   left: "320px",
                   width: "1280px",
                   height: "720px",
@@ -55150,10 +55167,12 @@ exports.default = App;
               ],
               1
             )
-          ]),
-          _vm._v(" "),
-          _c("transition", { attrs: { name: "title", mode: "out-in" } }, [
-            _c(
+          : _vm._e()
+      ]),
+      _vm._v(" "),
+      _c("transition", { attrs: { name: "title", mode: "out-in" } }, [
+        _vm.currentClip
+          ? _c(
               "div",
               {
                 key: _vm.currentClip.id,
@@ -55161,39 +55180,68 @@ exports.default = App;
                   position: "absolute",
                   top: "0px",
                   right: "0px",
-                  width: "720px",
-                  height: "96px",
+                  width: "1920px",
+                  height: "160px",
                   margin: "50px 50px",
                   textAlign: "right",
-                  fontSize: "72px"
+                  fontSize: "64px"
                 }
               },
               [
                 _c("highlight-title", {
-                  attrs: { title: _vm.currentClip.title }
+                  attrs: {
+                    title: _vm.currentClip.title,
+                    creator: _vm.currentClip.creatorName
+                  }
                 })
               ],
               1
             )
-          ]),
-          _vm._v(" "),
+          : _vm._e()
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          style: {
+            position: "absolute",
+            top: "0px",
+            left: "0px",
+            margin: "25px 50px",
+            width: "240px",
+            height: "160px"
+          }
+        },
+        [
+          _c("highlight-rank", {
+            attrs: { "clip-rank": _vm.currentState.rank }
+          })
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          style: {
+            position: "absolute",
+            right: "0px",
+            bottom: "0px",
+            width: "360px",
+            height: "140px",
+            margin: "10px 30px"
+          }
+        },
+        [
           _c(
             "div",
             {
               style: {
-                position: "absolute",
-                top: "0px",
-                left: "0px",
-                margin: "25px 50px",
-                width: "240px",
-                height: "160px"
+                width: "360px",
+                height: "100px"
               }
             },
-            [
-              _c("highlight-rank", {
-                attrs: { "clip-rank": _vm.currentState.rank }
-              })
-            ],
+            [_c("event-logo")],
             1
           ),
           _vm._v(" "),
@@ -55201,21 +55249,19 @@ exports.default = App;
             "div",
             {
               style: {
-                position: "absolute",
-                right: "0px",
-                bottom: "0px",
-                width: "360px",
-                height: "120px",
-                margin: "10px 30px"
+                font: "bold 36px Kosugi Maru",
+                color: _vm.$vuetify.theme.themes.light.primary,
+                textShadow:
+                  "2px 2px " + _vm.$vuetify.theme.themes.light.secondary
               }
             },
-            [_c("event-logo")],
-            1
+            [_vm._v("\n      クリップ振り返り配信\n    ")]
           )
-        ],
-        1
+        ]
       )
-    : _vm._e()
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -55308,7 +55354,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57396" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55347" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

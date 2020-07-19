@@ -1,14 +1,15 @@
 <template>
-  <overlay-base v-if="currentClip">
+  <overlay-base>
     <transition
       name="thumbnail"
       mode="out-in"
     >
       <div
+        v-if="currentClip"
         :key="currentClip.id"
         :style="{
           position: 'absolute',
-          top: '180px',
+          top: '200px',
           left: '320px',
           width: '1280px',
           height: '720px',
@@ -23,19 +24,23 @@
       mode="out-in"
     >
       <div
+        v-if="currentClip"
         :key="currentClip.id"
         :style="{
           position: 'absolute',
           top: '0px',
           right: '0px',
-          width: '720px',
-          height: '96px',
+          width: '1920px',
+          height: '160px',
           margin: '50px 50px',
           textAlign: 'right',
-          fontSize: '72px'
+          fontSize: '64px'
         }"
       >
-        <highlight-title :title="currentClip.title"></highlight-title>
+        <highlight-title
+          :title="currentClip.title"
+          :creator="currentClip.creatorName"
+        ></highlight-title>
       </div>
     </transition>
     <div
@@ -45,7 +50,7 @@
         left: '0px',
         margin: '25px 50px',
         width: '240px',
-        height: '160px'
+        height: '160px',
       }"
     >
       <highlight-rank
@@ -58,11 +63,27 @@
         right: '0px',
         bottom: '0px',
         width: '360px',
-        height: '120px',
+        height: '140px',
         margin: '10px 30px'
       }"
     >
-      <event-logo></event-logo>
+      <div
+        :style="{
+          width: '360px',
+          height: '100px'
+        }"
+      >
+        <event-logo></event-logo>
+      </div>
+      <div
+        :style="{
+          font: 'bold 36px Kosugi Maru',
+          color: $vuetify.theme.themes.light.primary,
+          textShadow: `2px 2px ${$vuetify.theme.themes.light.secondary}`
+        }"
+      >
+        クリップ振り返り配信
+      </div>
     </div>
   </overlay-base>
 </template>

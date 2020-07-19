@@ -26,4 +26,6 @@ export type MessageMap = {
   'saveCondition': {
     data: ImportCondition
   }
+
+  'deactivateCurrent': {}
 };

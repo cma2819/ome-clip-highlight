@@ -56,5 +56,9 @@ export const clipControl = (nodecg: NodeCG): void => {
 
   nodecg.listenFor('transitionTo', (id: string) => {
     currentClipReplicant.value = id;
-  })
+  });
+
+  nodecg.listenFor('deactivateCurrent', () => {
+    currentClipReplicant.value = null;
+  });
 }

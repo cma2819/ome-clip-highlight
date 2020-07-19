@@ -51071,6 +51071,7 @@ exports.default = new vuetify_1.default({
     iconfont: 'fa'
   },
   theme: {
+    dark: true,
     themes: {
       light: kusoge_1.default
     }
@@ -55209,6 +55210,10 @@ exports.default = ClipListElementComponent;
             ])
           ]),
           _vm._v(" "),
+          _c("labeled-text", { attrs: { label: "作者" } }, [
+            _vm._v("\n      " + _vm._s(_vm.data.creatorName) + "\n    ")
+          ]),
+          _vm._v(" "),
           _c(
             "v-row",
             { attrs: { justify: "end" } },
@@ -55780,7 +55785,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57081" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55195" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

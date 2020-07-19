@@ -4,7 +4,8 @@
       width: '100%',
       height: '100%',
       backgroundImage: `url(${logoUri})`,
-      backgroundSize: 'contain'
+      backgroundSize: 'contain',
+      backgroundPosition: 'center'
     }"
   />
 </template>

@@ -16,6 +16,9 @@
       </v-alert>
     </div>
     <next-clip-button :clip="nextClip"></next-clip-button>
+    <div class="my-2">
+      <deactivate-button v-if="currentClip"></deactivate-button>
+    </div>
   </v-app>
 </template>
 
@@ -25,6 +28,8 @@ import { Vue, Component } from 'vue-property-decorator';
 import PrevClipButton from './components/PrevClipButtonComponent.vue';
 import NextClipButton from './components/NextClipButtonComponent.vue';
 import CurrentClip from './components/CurrentClipComponent.vue';
+import DeactivateButton from './components/CurrentDeactivateComponent.vue';
+
 import { TwitchClip } from '../../../extension/types/twitchClip';
 import { TwitchClipArray } from '../../../nodecg/generated/twitchClipArray';
 import { TwitchClipStateArray } from '../../../nodecg/generated/twitchClipStateArray';
@@ -35,7 +40,8 @@ import { ClipState } from '../../../extension/types/clipState';
   components: {
     PrevClipButton,
     NextClipButton,
-    CurrentClip
+    CurrentClip,
+    DeactivateButton,
   }
 })
 export default class App extends Vue {

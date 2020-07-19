@@ -31,6 +31,9 @@
           target="_blank"
         >{{ clip.id }}</a>
       </labeled-text>
+      <labeled-text label="作者">
+        {{ clip.creatorName }}
+      </labeled-text>
     </v-card-text>
   </v-card>
 </template>
