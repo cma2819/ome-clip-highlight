@@ -30,7 +30,33 @@
         "file": "import-clip/index.html"
       }
     ],
-    "graphics": []
+    "graphics": [
+      {
+        "file": "index.html",
+        "width": 1920,
+        "height": 1080
+      }
+    ],
+    "assetCategories": [
+      {
+        "name": "background",
+        "title": "背景画像",
+        "allowedTypes": [
+          "jpg",
+          "jpeg",
+          "png"
+        ]
+      },
+      {
+        "name": "logo",
+        "title": "イベントロゴ",
+        "allowedTypes": [
+          "jpg",
+          "jpeg",
+          "png"
+        ]
+      }
+    ]
   },
   "main": "../../index.js",
   "scripts": {
@@ -40,10 +66,10 @@
     "build": "run-s build:*",
     "build:dashboard": "parcel build src/browser/dashboard/*/*.html --out-dir dashboard --public-url ./",
     "build:extension": "tsc -b src/extension/",
-    "build:graphics": "parcel build src/browser/graphics/*.html --out-dir graphics --public-url ./",
+    "build:graphics": "parcel build src/browser/graphics/*/*.html --out-dir graphics --public-url ./",
     "watch:dashboard": "parcel watch src/browser/dashboard/*/*.html --out-dir dashboard --public-url ./",
     "watch:extension": "tsc -b src/extension/ -w",
-    "watch:graphics": "parcel watch src/browser/graphics/*.html --out-dir graphics --public-url ./",
+    "watch:graphics": "parcel watch src/browser/graphics/*/*.html --out-dir graphics --public-url ./",
     "start": "node ../..",
     "schema-types": "nodecg schema-types -o src/nodecg/generated schemas"
   },

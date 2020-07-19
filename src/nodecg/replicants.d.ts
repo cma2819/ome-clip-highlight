@@ -6,7 +6,8 @@ import { TwitchGameArray } from "./generated/twitchGameArray";
 import { ImportCondition } from "./generated/importCondition";
 
 type ReplicantMap = {
-    assets: Assets,
+    'assets:background': Assets,
+    'assets:logo': Assets,
     currentTwitchClip: CurrentTwitchClip,
     twitchClipArray: TwitchClipArray,
     twitchClipStateArray: TwitchClipStateArray,

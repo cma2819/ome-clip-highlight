@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+
 /* So the <v-app> always has a transparent background,
 otherwise it looks odd in the NodeCG dashboard panels. */
 .v-application {
@@ -4567,8 +4569,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("fa-brands-400.d72ac080.eot");
-  src: url("fa-brands-400.d72ac080.eot?#iefix") format("embedded-opentype"), url("fa-brands-400.19a06923.woff2") format("woff2"), url("fa-brands-400.13390695.woff") format("woff"), url("fa-brands-400.46591581.ttf") format("truetype"), url("fa-brands-400.2bf394ab.svg#fontawesome") format("svg"); }
+  src: url("f3dec4568dfe8d24d45da51beded5b26.eot");
+  src: url("f3dec4568dfe8d24d45da51beded5b26.eot?#iefix") format("embedded-opentype"), url("1f6bb2ac3a45d824e2e8fb98113c4fee.woff2") format("woff2"), url("70c0293e8fa95b54cd26de51b7eccd2a.woff") format("woff"), url("cb5247377c7739ad948c7d4e224f9dfd.ttf") format("truetype"), url("226a13c24c3de07297b8afe7205de23c.svg#fontawesome") format("svg"); }
 
 .fab {
   font-family: 'Font Awesome 5 Brands';
@@ -4578,8 +4580,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("fa-regular-400.f2b81456.eot");
-  src: url("fa-regular-400.f2b81456.eot?#iefix") format("embedded-opentype"), url("fa-regular-400.86bda4fb.woff2") format("woff2"), url("fa-regular-400.3db99f89.woff") format("woff"), url("fa-regular-400.383d5885.ttf") format("truetype"), url("fa-regular-400.b2f356fc.svg#fontawesome") format("svg"); }
+  src: url("fad32aac3d1a39b74c46ebe80ebc3fc3.eot");
+  src: url("fad32aac3d1a39b74c46ebe80ebc3fc3.eot?#iefix") format("embedded-opentype"), url("bc7e8e1239b49ba0204a73048f950446.woff2") format("woff2"), url("7441261418d7ee327b19da61819d62cf.woff") format("woff"), url("b380f094e420539c083f622ad2f6b2d1.ttf") format("truetype"), url("7560bee272a7d91259bf9263c3565609.svg#fontawesome") format("svg"); }
 
 .far {
   font-family: 'Font Awesome 5 Free';
@@ -4589,8 +4591,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url("fa-solid-900.bcbf83d1.eot");
-  src: url("fa-solid-900.bcbf83d1.eot?#iefix") format("embedded-opentype"), url("fa-solid-900.fc7a022a.woff2") format("woff2"), url("fa-solid-900.9d52bf68.woff") format("woff"), url("fa-solid-900.17031829.ttf") format("truetype"), url("fa-solid-900.d3659f8e.svg#fontawesome") format("svg"); }
+  src: url("836c7b30369ec4288d6d2fbfa644aff8.eot");
+  src: url("836c7b30369ec4288d6d2fbfa644aff8.eot?#iefix") format("embedded-opentype"), url("555cd559475e8e6c4d69dcdf64e74022.woff2") format("woff2"), url("c45c57787eeba9dff4640ffa69913082.woff") format("woff"), url("7a372c459fa912aede744836ee72c020.ttf") format("truetype"), url("9b70871aaf9a021a517d28a4de24f1b5.svg#fontawesome") format("svg"); }
 
 .fa,
 .fas {
