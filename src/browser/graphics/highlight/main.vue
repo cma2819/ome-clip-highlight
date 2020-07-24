@@ -58,6 +58,22 @@
       ></highlight-rank>
     </div>
     <div
+      v-if="spotifyIsPlaying && spotifyTrack"
+      :style="{
+        position: 'absolute',
+        bottom: '0px',
+        left: '0px',
+        margin: '25px 25px',
+        width: '1280px',
+        font: '24px Kosugi Maru'
+      }"
+    >
+      <highlight-playing-track
+        :title="spotifyTrack.name"
+        :artist="spotifyArtistName"
+      ></highlight-playing-track>
+    </div>
+    <div
       :style="{
         position: 'absolute',
         right: '0px',
@@ -127,12 +143,14 @@ import OverlayBase from '../OverlayBase.vue';
 import HighlightRank from './components/HighlightRankComponent.vue';
 import HighlightThumbnail from './components/HighlightThumbnailComponent.vue';
 import HighlightTitle from './components/HighlightTitleComponent.vue';
+import HighlightPlayingTrack from './components/HighlightPlayingTrackComponent.vue';
 
 import { TwitchClip } from '../../../extension/types/twitchClip';
 import { TwitchClipArray } from '../../../nodecg/generated/twitchClipArray';
 import { TwitchClipStateArray } from '../../../nodecg/generated/twitchClipStateArray';
 import { ClipState } from '../../../extension/types/clipState';
 import clone from 'clone';
+import { SpotifyPlayingTrack } from '../../../nodecg/external/nodecg-spotify-widget/spotifyPlayingTrack';
 
 @Component({
   components: {
@@ -141,12 +159,15 @@ import clone from 'clone';
     HighlightRank,
     HighlightThumbnail,
     HighlightTitle,
+    HighlightPlayingTrack,
   }
 })
 export default class App extends Vue {
   clips: TwitchClipArray = [];
   currentClip: TwitchClip|null = null;
   clipStates: TwitchClipStateArray = [];
+  spotifyTrack: SpotifyPlayingTrack = null;
+  spotifyIsPlaying = false;
 
   created(): void {
     nodecg.Replicant('twitchClipArray').on('change', (newVal) => {
@@ -162,6 +183,15 @@ export default class App extends Vue {
     nodecg.Replicant('twitchClipStateArray').on('change', (newVal) => {
       this.clipStates = clone(newVal);
     });
+
+    nodecg.Replicant('spotifyPlayingTrack', 'nodecg-spotify-widget').on('change', (track) => {
+      this.spotifyTrack = clone(track);
+    });
+
+    nodecg.Replicant('spotifyPlayingContext', 'nodecg-spotify-widget').on('change', (context) => {
+      console.log(context);
+      this.spotifyIsPlaying = context?.is_playing || false;
+    });
   }
 
   get currentState(): ClipState {
@@ -172,6 +202,13 @@ export default class App extends Vue {
       rank: null,
       disabled: false
     };
+  }
+
+  get spotifyArtistName(): string {
+    if (!this.spotifyTrack) {
+      return '';
+    }
+    return this.spotifyTrack.artists.join('/');
   }
 }
 </script>

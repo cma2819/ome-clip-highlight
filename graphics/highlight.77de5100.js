@@ -52141,14 +52141,14 @@ function (_super) {
 }(vue_property_decorator_1.Vue);
 
 exports.default = EventLogo;
-        var $95e854 = exports.default || module.exports;
+        var $ab68aa = exports.default || module.exports;
       
-      if (typeof $95e854 === 'function') {
-        $95e854 = $95e854.options;
+      if (typeof $ab68aa === 'function') {
+        $ab68aa = $ab68aa.options;
       }
     
         /* template */
-        Object.assign($95e854, (function () {
+        Object.assign($ab68aa, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -52183,9 +52183,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$95e854', $95e854);
+            api.createRecord('$ab68aa', $ab68aa);
           } else {
-            api.reload('$95e854', $95e854);
+            api.reload('$ab68aa', $ab68aa);
           }
         }
 
@@ -52267,14 +52267,14 @@ function (_super) {
 }(vue_property_decorator_1.Vue);
 
 exports.default = OverlayBase;
-        var $9723a8 = exports.default || module.exports;
+        var $177548 = exports.default || module.exports;
       
-      if (typeof $9723a8 === 'function') {
-        $9723a8 = $9723a8.options;
+      if (typeof $177548 === 'function') {
+        $177548 = $177548.options;
       }
     
         /* template */
-        Object.assign($9723a8, (function () {
+        Object.assign($177548, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -52311,9 +52311,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$9723a8', $9723a8);
+            api.createRecord('$177548', $177548);
           } else {
-            api.reload('$9723a8', $9723a8);
+            api.reload('$177548', $177548);
           }
         }
 
@@ -52387,14 +52387,14 @@ function (_super) {
 }(vue_property_decorator_1.Vue);
 
 exports.default = HighlightRankComponent;
-        var $476b4a = exports.default || module.exports;
+        var $89acac = exports.default || module.exports;
       
-      if (typeof $476b4a === 'function') {
-        $476b4a = $476b4a.options;
+      if (typeof $89acac === 'function') {
+        $89acac = $89acac.options;
       }
     
         /* template */
-        Object.assign($476b4a, (function () {
+        Object.assign($89acac, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -52424,7 +52424,7 @@ render._withStripped = true
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-            _scopeId: "data-v-476b4a",
+            _scopeId: "data-v-89acac",
             functional: undefined
           };
         })());
@@ -52437,9 +52437,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$476b4a', $476b4a);
+            api.createRecord('$89acac', $89acac);
           } else {
-            api.reload('$476b4a', $476b4a);
+            api.reload('$89acac', $89acac);
           }
         }
 
@@ -52513,14 +52513,14 @@ function (_super) {
 }(vue_property_decorator_1.Vue);
 
 exports.default = HighlightThumbnailComponent;
-        var $2553b9 = exports.default || module.exports;
+        var $63e9b4 = exports.default || module.exports;
       
-      if (typeof $2553b9 === 'function') {
-        $2553b9 = $2553b9.options;
+      if (typeof $63e9b4 === 'function') {
+        $63e9b4 = $63e9b4.options;
       }
     
         /* template */
-        Object.assign($2553b9, (function () {
+        Object.assign($63e9b4, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -52540,7 +52540,7 @@ render._withStripped = true
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-            _scopeId: "data-v-2553b9",
+            _scopeId: "data-v-63e9b4",
             functional: undefined
           };
         })());
@@ -52553,9 +52553,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$2553b9', $2553b9);
+            api.createRecord('$63e9b4', $63e9b4);
           } else {
-            api.reload('$2553b9', $2553b9);
+            api.reload('$63e9b4', $63e9b4);
           }
         }
 
@@ -52631,14 +52631,14 @@ function (_super) {
 }(vue_property_decorator_1.Vue);
 
 exports.default = HighlightTitleComponent;
-        var $aff4ad = exports.default || module.exports;
+        var $e0ae04 = exports.default || module.exports;
       
-      if (typeof $aff4ad === 'function') {
-        $aff4ad = $aff4ad.options;
+      if (typeof $e0ae04 === 'function') {
+        $e0ae04 = $e0ae04.options;
       }
     
         /* template */
-        Object.assign($aff4ad, (function () {
+        Object.assign($e0ae04, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -52665,7 +52665,7 @@ render._withStripped = true
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-            _scopeId: "data-v-aff4ad",
+            _scopeId: "data-v-e0ae04",
             functional: undefined
           };
         })());
@@ -52678,9 +52678,156 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$aff4ad', $aff4ad);
+            api.createRecord('$e0ae04', $e0ae04);
           } else {
-            api.reload('$aff4ad', $aff4ad);
+            api.reload('$e0ae04', $e0ae04);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"vue-property-decorator":"../../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","_css_loader":"../../../../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../../node_modules/vue/dist/vue.runtime.esm.js"}],"components/HighlightPlayingTrackComponent.vue":[function(require,module,exports) {
+"use strict";
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var __extends = this && this.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (b.hasOwnProperty(p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+var __decorate = this && this.__decorate || function (decorators, target, key, desc) {
+  var c = arguments.length,
+      r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+      d;
+  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+    if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+  }
+  return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var vue_property_decorator_1 = require("vue-property-decorator");
+
+var HighlightPlayingTrackComponent =
+/** @class */
+function (_super) {
+  __extends(HighlightPlayingTrackComponent, _super);
+
+  function HighlightPlayingTrackComponent() {
+    return _super !== null && _super.apply(this, arguments) || this;
+  }
+
+  __decorate([vue_property_decorator_1.Prop(String)], HighlightPlayingTrackComponent.prototype, "title", void 0);
+
+  __decorate([vue_property_decorator_1.Prop(String)], HighlightPlayingTrackComponent.prototype, "artist", void 0);
+
+  HighlightPlayingTrackComponent = __decorate([vue_property_decorator_1.Component], HighlightPlayingTrackComponent);
+  return HighlightPlayingTrackComponent;
+}(vue_property_decorator_1.Vue);
+
+exports.default = HighlightPlayingTrackComponent;
+        var $70c18b = exports.default || module.exports;
+      
+      if (typeof $70c18b === 'function') {
+        $70c18b = $70c18b.options;
+      }
+    
+        /* template */
+        Object.assign($70c18b, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      style: {
+        margin: "0.5rem"
+      }
+    },
+    [
+      _c("div", { staticClass: "title" }, [
+        _vm._m(0),
+        _vm._v("\n    " + _vm._s(_vm.title) + "\n  ")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "artist" }, [
+        _vm._m(1),
+        _vm._v("\n    " + _vm._s(_vm.artist) + "\n  ")
+      ])
+    ]
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "icon" }, [
+      _c("i", { staticClass: "fas fa-music" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "icon" }, [
+      _c("i", { staticClass: "fas fa-user" })
+    ])
+  }
+]
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: "data-v-70c18b",
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$70c18b', $70c18b);
+          } else {
+            api.reload('$70c18b', $70c18b);
           }
         }
 
@@ -55068,6 +55215,8 @@ var HighlightThumbnailComponent_vue_1 = __importDefault(require("./components/Hi
 
 var HighlightTitleComponent_vue_1 = __importDefault(require("./components/HighlightTitleComponent.vue"));
 
+var HighlightPlayingTrackComponent_vue_1 = __importDefault(require("./components/HighlightPlayingTrackComponent.vue"));
+
 var clone_1 = __importDefault(require("clone"));
 
 var App =
@@ -55081,6 +55230,8 @@ function (_super) {
     _this.clips = [];
     _this.currentClip = null;
     _this.clipStates = [];
+    _this.spotifyTrack = null;
+    _this.spotifyIsPlaying = false;
     return _this;
   }
 
@@ -55097,6 +55248,15 @@ function (_super) {
     });
     nodecg.Replicant('twitchClipStateArray').on('change', function (newVal) {
       _this.clipStates = clone_1.default(newVal);
+    });
+    nodecg.Replicant('spotifyPlayingTrack', 'nodecg-spotify-widget').on('change', function (track) {
+      _this.spotifyTrack = clone_1.default(track);
+    });
+    nodecg.Replicant('spotifyPlayingContext', 'nodecg-spotify-widget').on('change', function (context) {
+      var _a;
+
+      console.log(context);
+      _this.spotifyIsPlaying = ((_a = context) === null || _a === void 0 ? void 0 : _a.is_playing) || false;
     });
   };
 
@@ -55117,27 +55277,39 @@ function (_super) {
     enumerable: true,
     configurable: true
   });
+  Object.defineProperty(App.prototype, "spotifyArtistName", {
+    get: function get() {
+      if (!this.spotifyTrack) {
+        return '';
+      }
+
+      return this.spotifyTrack.artists.join('/');
+    },
+    enumerable: true,
+    configurable: true
+  });
   App = __decorate([vue_property_decorator_1.Component({
     components: {
       OverlayBase: OverlayBase_vue_1.default,
       EventLogo: EventLogo_vue_1.default,
       HighlightRank: HighlightRankComponent_vue_1.default,
       HighlightThumbnail: HighlightThumbnailComponent_vue_1.default,
-      HighlightTitle: HighlightTitleComponent_vue_1.default
+      HighlightTitle: HighlightTitleComponent_vue_1.default,
+      HighlightPlayingTrack: HighlightPlayingTrackComponent_vue_1.default
     }
   })], App);
   return App;
 }(vue_property_decorator_1.Vue);
 
 exports.default = App;
-        var $5d60a5 = exports.default || module.exports;
+        var $8b1878 = exports.default || module.exports;
       
-      if (typeof $5d60a5 === 'function') {
-        $5d60a5 = $5d60a5.options;
+      if (typeof $8b1878 === 'function') {
+        $8b1878 = $8b1878.options;
       }
     
         /* template */
-        Object.assign($5d60a5, (function () {
+        Object.assign($8b1878, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -55220,6 +55392,31 @@ exports.default = App;
         1
       ),
       _vm._v(" "),
+      _vm.spotifyIsPlaying && _vm.spotifyTrack
+        ? _c(
+            "div",
+            {
+              style: {
+                position: "absolute",
+                bottom: "0px",
+                left: "0px",
+                margin: "25px 25px",
+                width: "1280px",
+                font: "24px Kosugi Maru"
+              }
+            },
+            [
+              _c("highlight-playing-track", {
+                attrs: {
+                  title: _vm.spotifyTrack.name,
+                  artist: _vm.spotifyArtistName
+                }
+              })
+            ],
+            1
+          )
+        : _vm._e(),
+      _vm._v(" "),
       _c(
         "div",
         {
@@ -55270,7 +55467,7 @@ render._withStripped = true
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-            _scopeId: "data-v-5d60a5",
+            _scopeId: "data-v-8b1878",
             functional: undefined
           };
         })());
@@ -55283,9 +55480,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$5d60a5', $5d60a5);
+            api.createRecord('$8b1878', $8b1878);
           } else {
-            api.reload('$5d60a5', $5d60a5);
+            api.reload('$8b1878', $8b1878);
           }
         }
 
@@ -55296,7 +55493,7 @@ render._withStripped = true
       
       }
     })();
-},{"vue-property-decorator":"../../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","../components/EventLogo.vue":"../components/EventLogo.vue","../OverlayBase.vue":"../OverlayBase.vue","./components/HighlightRankComponent.vue":"components/HighlightRankComponent.vue","./components/HighlightThumbnailComponent.vue":"components/HighlightThumbnailComponent.vue","./components/HighlightTitleComponent.vue":"components/HighlightTitleComponent.vue","clone":"../../../../node_modules/clone/clone.js","_css_loader":"../../../../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../../node_modules/vue/dist/vue.runtime.esm.js"}],"index.ts":[function(require,module,exports) {
+},{"vue-property-decorator":"../../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","../components/EventLogo.vue":"../components/EventLogo.vue","../OverlayBase.vue":"../OverlayBase.vue","./components/HighlightRankComponent.vue":"components/HighlightRankComponent.vue","./components/HighlightThumbnailComponent.vue":"components/HighlightThumbnailComponent.vue","./components/HighlightTitleComponent.vue":"components/HighlightTitleComponent.vue","./components/HighlightPlayingTrackComponent.vue":"components/HighlightPlayingTrackComponent.vue","clone":"../../../../node_modules/clone/clone.js","_css_loader":"../../../../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../../node_modules/vue/dist/vue.runtime.esm.js"}],"index.ts":[function(require,module,exports) {
 "use strict";
 /* eslint no-new: off, @typescript-eslint/explicit-function-return-type: off */
 
@@ -55354,7 +55551,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55347" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62371" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

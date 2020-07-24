@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../../../node_modules/vue/dist/vue.runtime.esm.js":[function(require,module,exports) {
+})({"../../../node_modules/vue/dist/vue.runtime.esm.js":[function(require,module,exports) {
 var global = arguments[3];
 "use strict";
 
@@ -8546,7 +8546,7 @@ if (inBrowser) {
 
 var _default = Vue;
 exports.default = _default;
-},{}],"../../../../node_modules/vuex/dist/vuex.esm.js":[function(require,module,exports) {
+},{}],"../../../node_modules/vuex/dist/vuex.esm.js":[function(require,module,exports) {
 var global = arguments[3];
 "use strict";
 
@@ -9703,7 +9703,7 @@ var index_esm = {
 };
 var _default = index_esm;
 exports.default = _default;
-},{}],"../../plugin/store.ts":[function(require,module,exports) {
+},{}],"../plugin/store.ts":[function(require,module,exports) {
 "use strict";
 
 var __importDefault = this && this.__importDefault || function (mod) {
@@ -9722,7 +9722,7 @@ var vuex_1 = __importDefault(require("vuex"));
 
 vue_1.default.use(vuex_1.default);
 exports.default = new vuex_1.default.Store({});
-},{"vue":"../../../../node_modules/vue/dist/vue.runtime.esm.js","vuex":"../../../../node_modules/vuex/dist/vuex.esm.js"}],"../../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"vue":"../../../node_modules/vue/dist/vue.runtime.esm.js","vuex":"../../../node_modules/vuex/dist/vuex.esm.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -9754,7 +9754,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../../../../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"../../../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -9789,23 +9789,23 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../plugin/common.css":[function(require,module,exports) {
+},{"./bundle-url":"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../plugin/common.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../node_modules/@fortawesome/fontawesome-free/css/all.css":[function(require,module,exports) {
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@fortawesome/fontawesome-free/css/all.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\webfonts\\fa-brands-400.eot":[["fa-brands-400.d72ac080.eot","../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.eot"],"../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.eot"],"./..\\webfonts\\fa-brands-400.woff2":[["fa-brands-400.19a06923.woff2","../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2"],"../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2"],"./..\\webfonts\\fa-brands-400.woff":[["fa-brands-400.13390695.woff","../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff"],"../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff"],"./..\\webfonts\\fa-brands-400.ttf":[["fa-brands-400.46591581.ttf","../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf"],"../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf"],"./..\\webfonts\\fa-brands-400.svg":[["fa-brands-400.2bf394ab.svg","../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.svg"],"../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.svg"],"./..\\webfonts\\fa-regular-400.eot":[["fa-regular-400.f2b81456.eot","../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.eot"],"../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.eot"],"./..\\webfonts\\fa-regular-400.woff2":[["fa-regular-400.86bda4fb.woff2","../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2"],"../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2"],"./..\\webfonts\\fa-regular-400.woff":[["fa-regular-400.3db99f89.woff","../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff"],"../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff"],"./..\\webfonts\\fa-regular-400.ttf":[["fa-regular-400.383d5885.ttf","../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf"],"../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf"],"./..\\webfonts\\fa-regular-400.svg":[["fa-regular-400.b2f356fc.svg","../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.svg"],"../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.svg"],"./..\\webfonts\\fa-solid-900.eot":[["fa-solid-900.bcbf83d1.eot","../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.eot"],"../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.eot"],"./..\\webfonts\\fa-solid-900.woff2":[["fa-solid-900.fc7a022a.woff2","../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2"],"../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2"],"./..\\webfonts\\fa-solid-900.woff":[["fa-solid-900.9d52bf68.woff","../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff"],"../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff"],"./..\\webfonts\\fa-solid-900.ttf":[["fa-solid-900.17031829.ttf","../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf"],"../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf"],"./..\\webfonts\\fa-solid-900.svg":[["fa-solid-900.d3659f8e.svg","../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.svg"],"../../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.svg"],"_css_loader":"../../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../node_modules/vuetify/dist/vuetify.min.css":[function(require,module,exports) {
+},{"./..\\webfonts\\fa-brands-400.eot":[["fa-brands-400.d72ac080.eot","../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.eot"],"../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.eot"],"./..\\webfonts\\fa-brands-400.woff2":[["fa-brands-400.19a06923.woff2","../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2"],"../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2"],"./..\\webfonts\\fa-brands-400.woff":[["fa-brands-400.13390695.woff","../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff"],"../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff"],"./..\\webfonts\\fa-brands-400.ttf":[["fa-brands-400.46591581.ttf","../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf"],"../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf"],"./..\\webfonts\\fa-brands-400.svg":[["fa-brands-400.2bf394ab.svg","../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.svg"],"../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.svg"],"./..\\webfonts\\fa-regular-400.eot":[["fa-regular-400.f2b81456.eot","../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.eot"],"../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.eot"],"./..\\webfonts\\fa-regular-400.woff2":[["fa-regular-400.86bda4fb.woff2","../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2"],"../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2"],"./..\\webfonts\\fa-regular-400.woff":[["fa-regular-400.3db99f89.woff","../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff"],"../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff"],"./..\\webfonts\\fa-regular-400.ttf":[["fa-regular-400.383d5885.ttf","../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf"],"../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf"],"./..\\webfonts\\fa-regular-400.svg":[["fa-regular-400.b2f356fc.svg","../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.svg"],"../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.svg"],"./..\\webfonts\\fa-solid-900.eot":[["fa-solid-900.bcbf83d1.eot","../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.eot"],"../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.eot"],"./..\\webfonts\\fa-solid-900.woff2":[["fa-solid-900.fc7a022a.woff2","../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2"],"../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2"],"./..\\webfonts\\fa-solid-900.woff":[["fa-solid-900.9d52bf68.woff","../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff"],"../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff"],"./..\\webfonts\\fa-solid-900.ttf":[["fa-solid-900.17031829.ttf","../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf"],"../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf"],"./..\\webfonts\\fa-solid-900.svg":[["fa-solid-900.d3659f8e.svg","../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.svg"],"../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.svg"],"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/vuetify/dist/vuetify.min.css":[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":"../../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../node_modules/vuetify/dist/vuetify.js":[function(require,module,exports) {
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/vuetify/dist/vuetify.js":[function(require,module,exports) {
 var define;
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
@@ -51027,7 +51027,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_vue__;
 /******/ })["default"];
 });
 
-},{"vue":"../../../../node_modules/vue/dist/vue.runtime.esm.js"}],"../../plugin/themes/kusoge.ts":[function(require,module,exports) {
+},{"vue":"../../../node_modules/vue/dist/vue.runtime.esm.js"}],"../plugin/themes/kusoge.ts":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -51039,7 +51039,7 @@ exports.default = {
   info: 'rgba(12,97,125,0.56)',
   background: 'rgba(255,255,255,0.6)'
 };
-},{}],"../../plugin/vuetify.ts":[function(require,module,exports) {
+},{}],"../plugin/vuetify.ts":[function(require,module,exports) {
 "use strict";
 
 var __importDefault = this && this.__importDefault || function (mod) {
@@ -51077,7 +51077,7 @@ exports.default = new vuetify_1.default({
     }
   }
 });
-},{"vue":"../../../../node_modules/vue/dist/vue.runtime.esm.js","./common.css":"../../plugin/common.css","@fortawesome/fontawesome-free/css/all.css":"../../../../node_modules/@fortawesome/fontawesome-free/css/all.css","vuetify/dist/vuetify.min.css":"../../../../node_modules/vuetify/dist/vuetify.min.css","vuetify":"../../../../node_modules/vuetify/dist/vuetify.js","./themes/kusoge":"../../plugin/themes/kusoge.ts"}],"../../../../node_modules/vue-class-component/dist/vue-class-component.esm.js":[function(require,module,exports) {
+},{"vue":"../../../node_modules/vue/dist/vue.runtime.esm.js","./common.css":"../plugin/common.css","@fortawesome/fontawesome-free/css/all.css":"../../../node_modules/@fortawesome/fontawesome-free/css/all.css","vuetify/dist/vuetify.min.css":"../../../node_modules/vuetify/dist/vuetify.min.css","vuetify":"../../../node_modules/vuetify/dist/vuetify.js","./themes/kusoge":"../plugin/themes/kusoge.ts"}],"../../../node_modules/vue-class-component/dist/vue-class-component.esm.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -51418,7 +51418,7 @@ Component.registerHooks = function registerHooks(keys) {
 
 var _default = Component;
 exports.default = _default;
-},{"vue":"../../../../node_modules/vue/dist/vue.runtime.esm.js"}],"../../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js":[function(require,module,exports) {
+},{"vue":"../../../node_modules/vue/dist/vue.runtime.esm.js"}],"../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js":[function(require,module,exports) {
 /** vue-property-decorator verson 8.4.0 MIT LICENSE copyright 2019 kaorun343 */
 /// <reference types='reflect-metadata'/>
 'use strict';
@@ -51791,7 +51791,7 @@ function Ref(refKey) {
 function isPromise(obj) {
   return obj instanceof Promise || obj && typeof obj.then === 'function';
 }
-},{"vue":"../../../../node_modules/vue/dist/vue.runtime.esm.js","vue-class-component":"../../../../node_modules/vue-class-component/dist/vue-class-component.esm.js"}],"../../../../node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
+},{"vue":"../../../node_modules/vue/dist/vue.runtime.esm.js","vue-class-component":"../../../node_modules/vue-class-component/dist/vue-class-component.esm.js"}],"../../../node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
 var Vue // late bind
 var version
 var map = Object.create(null)
@@ -52154,14 +52154,14 @@ function (_super) {
 }(vue_property_decorator_1.Vue);
 
 exports.default = ImportButtonComponent;
-        var $786f45 = exports.default || module.exports;
+        var $a7abc1 = exports.default || module.exports;
       
-      if (typeof $786f45 === 'function') {
-        $786f45 = $786f45.options;
+      if (typeof $a7abc1 === 'function') {
+        $a7abc1 = $a7abc1.options;
       }
     
         /* template */
-        Object.assign($786f45, (function () {
+        Object.assign($a7abc1, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -52192,16 +52192,16 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$786f45', $786f45);
+            api.createRecord('$a7abc1', $a7abc1);
           } else {
-            api.reload('$786f45', $786f45);
+            api.reload('$a7abc1', $a7abc1);
           }
         }
 
         
       }
     })();
-},{"vue-property-decorator":"../../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","vue-hot-reload-api":"../../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../../node_modules/vue/dist/vue.runtime.esm.js"}],"import-clip/components/ImportAreaComponent.vue":[function(require,module,exports) {
+},{"vue-property-decorator":"../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","vue-hot-reload-api":"../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../node_modules/vue/dist/vue.runtime.esm.js"}],"import-clip/components/ImportAreaComponent.vue":[function(require,module,exports) {
 "use strict";
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -52298,14 +52298,14 @@ function (_super) {
 }(vue_property_decorator_1.Vue);
 
 exports.default = ImportAreaComponent;
-        var $49778c = exports.default || module.exports;
+        var $8da1fb = exports.default || module.exports;
       
-      if (typeof $49778c === 'function') {
-        $49778c = $49778c.options;
+      if (typeof $8da1fb === 'function') {
+        $8da1fb = $8da1fb.options;
       }
     
         /* template */
-        Object.assign($49778c, (function () {
+        Object.assign($8da1fb, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -52554,16 +52554,16 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$49778c', $49778c);
+            api.createRecord('$8da1fb', $8da1fb);
           } else {
-            api.reload('$49778c', $49778c);
+            api.reload('$8da1fb', $8da1fb);
           }
         }
 
         
       }
     })();
-},{"vue-property-decorator":"../../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","./ImportButtonComponent.vue":"import-clip/components/ImportButtonComponent.vue","vue-hot-reload-api":"../../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../../node_modules/vue/dist/vue.runtime.esm.js"}],"_lib/components/LabeledTextComponent.vue":[function(require,module,exports) {
+},{"vue-property-decorator":"../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","./ImportButtonComponent.vue":"import-clip/components/ImportButtonComponent.vue","vue-hot-reload-api":"../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../node_modules/vue/dist/vue.runtime.esm.js"}],"_lib/components/LabeledTextComponent.vue":[function(require,module,exports) {
 "use strict";
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -52626,14 +52626,14 @@ function (_super) {
 }(vue_property_decorator_1.Vue);
 
 exports.default = LabeledTextComponent;
-        var $70c1d5 = exports.default || module.exports;
+        var $1ab8f9 = exports.default || module.exports;
       
-      if (typeof $70c1d5 === 'function') {
-        $70c1d5 = $70c1d5.options;
+      if (typeof $1ab8f9 === 'function') {
+        $1ab8f9 = $1ab8f9.options;
       }
     
         /* template */
-        Object.assign($70c1d5, (function () {
+        Object.assign($1ab8f9, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -52671,16 +52671,16 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$70c1d5', $70c1d5);
+            api.createRecord('$1ab8f9', $1ab8f9);
           } else {
-            api.reload('$70c1d5', $70c1d5);
+            api.reload('$1ab8f9', $1ab8f9);
           }
         }
 
         
       }
     })();
-},{"vue-property-decorator":"../../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","vue-hot-reload-api":"../../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../../node_modules/vue/dist/vue.runtime.esm.js"}],"../../../../node_modules/base64-js/index.js":[function(require,module,exports) {
+},{"vue-property-decorator":"../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","vue-hot-reload-api":"../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../node_modules/vue/dist/vue.runtime.esm.js"}],"../../../node_modules/base64-js/index.js":[function(require,module,exports) {
 'use strict'
 
 exports.byteLength = byteLength
@@ -52834,7 +52834,7 @@ function fromByteArray (uint8) {
   return parts.join('')
 }
 
-},{}],"../../../../node_modules/ieee754/index.js":[function(require,module,exports) {
+},{}],"../../../node_modules/ieee754/index.js":[function(require,module,exports) {
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = (nBytes * 8) - mLen - 1
@@ -52920,14 +52920,14 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],"../../../../node_modules/isarray/index.js":[function(require,module,exports) {
+},{}],"../../../node_modules/isarray/index.js":[function(require,module,exports) {
 var toString = {}.toString;
 
 module.exports = Array.isArray || function (arr) {
   return toString.call(arr) == '[object Array]';
 };
 
-},{}],"../../../../node_modules/buffer/index.js":[function(require,module,exports) {
+},{}],"../../../node_modules/buffer/index.js":[function(require,module,exports) {
 
 var global = arguments[3];
 /*!
@@ -54720,7 +54720,7 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-},{"base64-js":"../../../../node_modules/base64-js/index.js","ieee754":"../../../../node_modules/ieee754/index.js","isarray":"../../../../node_modules/isarray/index.js","buffer":"../../../../node_modules/buffer/index.js"}],"../../../../node_modules/clone/clone.js":[function(require,module,exports) {
+},{"base64-js":"../../../node_modules/base64-js/index.js","ieee754":"../../../node_modules/ieee754/index.js","isarray":"../../../node_modules/isarray/index.js","buffer":"../../../node_modules/buffer/index.js"}],"../../../node_modules/clone/clone.js":[function(require,module,exports) {
 var Buffer = require("buffer").Buffer;
 var clone = function () {
   'use strict';
@@ -54993,7 +54993,7 @@ var clone = function () {
 if (typeof module === 'object' && module.exports) {
   module.exports = clone;
 }
-},{"buffer":"../../../../node_modules/buffer/index.js"}],"import-clip/components/ClipListElementComponent.vue":[function(require,module,exports) {
+},{"buffer":"../../../node_modules/buffer/index.js"}],"import-clip/components/ClipListElementComponent.vue":[function(require,module,exports) {
 "use strict";
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -55112,14 +55112,14 @@ function (_super) {
 }(vue_property_decorator_1.Vue);
 
 exports.default = ClipListElementComponent;
-        var $fbd067 = exports.default || module.exports;
+        var $73d11e = exports.default || module.exports;
       
-      if (typeof $fbd067 === 'function') {
-        $fbd067 = $fbd067.options;
+      if (typeof $73d11e === 'function') {
+        $73d11e = $73d11e.options;
       }
     
         /* template */
-        Object.assign($fbd067, (function () {
+        Object.assign($73d11e, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -55260,7 +55260,7 @@ render._withStripped = true
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-            _scopeId: "data-v-fbd067",
+            _scopeId: "data-v-73d11e",
             functional: undefined
           };
         })());
@@ -55273,9 +55273,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$fbd067', $fbd067);
+            api.createRecord('$73d11e', $73d11e);
           } else {
-            api.reload('$fbd067', $fbd067);
+            api.reload('$73d11e', $73d11e);
           }
         }
 
@@ -55286,7 +55286,7 @@ render._withStripped = true
       
       }
     })();
-},{"vue-property-decorator":"../../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","../../_lib/components/LabeledTextComponent.vue":"_lib/components/LabeledTextComponent.vue","clone":"../../../../node_modules/clone/clone.js","_css_loader":"../../../../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../../node_modules/vue/dist/vue.runtime.esm.js"}],"import-clip/components/ClipListComponent.vue":[function(require,module,exports) {
+},{"vue-property-decorator":"../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","../../_lib/components/LabeledTextComponent.vue":"_lib/components/LabeledTextComponent.vue","clone":"../../../node_modules/clone/clone.js","_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../node_modules/vue/dist/vue.runtime.esm.js"}],"import-clip/components/ClipListComponent.vue":[function(require,module,exports) {
 "use strict";
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -55391,14 +55391,14 @@ function (_super) {
 }(vue_property_decorator_1.Vue);
 
 exports.default = ClipListComponent;
-        var $93eca3 = exports.default || module.exports;
+        var $d1d97f = exports.default || module.exports;
       
-      if (typeof $93eca3 === 'function') {
-        $93eca3 = $93eca3.options;
+      if (typeof $d1d97f === 'function') {
+        $d1d97f = $d1d97f.options;
       }
     
         /* template */
-        Object.assign($93eca3, (function () {
+        Object.assign($d1d97f, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -55434,16 +55434,16 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$93eca3', $93eca3);
+            api.createRecord('$d1d97f', $d1d97f);
           } else {
-            api.reload('$93eca3', $93eca3);
+            api.reload('$d1d97f', $d1d97f);
           }
         }
 
         
       }
     })();
-},{"vue-property-decorator":"../../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","./ClipListElementComponent.vue":"import-clip/components/ClipListElementComponent.vue","clone":"../../../../node_modules/clone/clone.js","vue-hot-reload-api":"../../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../../node_modules/vue/dist/vue.runtime.esm.js"}],"import-clip/components/ClipAreaComponent.vue":[function(require,module,exports) {
+},{"vue-property-decorator":"../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","./ClipListElementComponent.vue":"import-clip/components/ClipListElementComponent.vue","clone":"../../../node_modules/clone/clone.js","vue-hot-reload-api":"../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../node_modules/vue/dist/vue.runtime.esm.js"}],"import-clip/components/ClipAreaComponent.vue":[function(require,module,exports) {
 "use strict";
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -55530,14 +55530,14 @@ function (_super) {
 }(vue_property_decorator_1.Vue);
 
 exports.default = ClipAreaComponent;
-        var $b4a0b8 = exports.default || module.exports;
+        var $e29aef = exports.default || module.exports;
       
-      if (typeof $b4a0b8 === 'function') {
-        $b4a0b8 = $b4a0b8.options;
+      if (typeof $e29aef === 'function') {
+        $e29aef = $e29aef.options;
       }
     
         /* template */
-        Object.assign($b4a0b8, (function () {
+        Object.assign($e29aef, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -55574,16 +55574,16 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$b4a0b8', $b4a0b8);
+            api.createRecord('$e29aef', $e29aef);
           } else {
-            api.reload('$b4a0b8', $b4a0b8);
+            api.reload('$e29aef', $e29aef);
           }
         }
 
         
       }
     })();
-},{"vue-property-decorator":"../../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","./ClipListComponent.vue":"import-clip/components/ClipListComponent.vue","clone":"../../../../node_modules/clone/clone.js","vue-hot-reload-api":"../../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../../node_modules/vue/dist/vue.runtime.esm.js"}],"import-clip/main.vue":[function(require,module,exports) {
+},{"vue-property-decorator":"../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","./ClipListComponent.vue":"import-clip/components/ClipListComponent.vue","clone":"../../../node_modules/clone/clone.js","vue-hot-reload-api":"../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../node_modules/vue/dist/vue.runtime.esm.js"}],"import-clip/main.vue":[function(require,module,exports) {
 "use strict";
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -55659,14 +55659,14 @@ function (_super) {
 }(vue_property_decorator_1.Vue);
 
 exports.default = App;
-        var $f30b4e = exports.default || module.exports;
+        var $ba5be4 = exports.default || module.exports;
       
-      if (typeof $f30b4e === 'function') {
-        $f30b4e = $f30b4e.options;
+      if (typeof $ba5be4 === 'function') {
+        $ba5be4 = $ba5be4.options;
       }
     
         /* template */
-        Object.assign($f30b4e, (function () {
+        Object.assign($ba5be4, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -55718,16 +55718,16 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$f30b4e', $f30b4e);
+            api.createRecord('$ba5be4', $ba5be4);
           } else {
-            api.reload('$f30b4e', $f30b4e);
+            api.reload('$ba5be4', $ba5be4);
           }
         }
 
         
       }
     })();
-},{"vue-property-decorator":"../../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","./components/ImportAreaComponent.vue":"import-clip/components/ImportAreaComponent.vue","./components/ClipAreaComponent.vue":"import-clip/components/ClipAreaComponent.vue","vue-hot-reload-api":"../../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../../node_modules/vue/dist/vue.runtime.esm.js"}],"import-clip/index.ts":[function(require,module,exports) {
+},{"vue-property-decorator":"../../../node_modules/vue-property-decorator/lib/vue-property-decorator.js","./components/ImportAreaComponent.vue":"import-clip/components/ImportAreaComponent.vue","./components/ClipAreaComponent.vue":"import-clip/components/ClipAreaComponent.vue","vue-hot-reload-api":"../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../node_modules/vue/dist/vue.runtime.esm.js"}],"import-clip/index.ts":[function(require,module,exports) {
 "use strict";
 /* eslint no-new: off, @typescript-eslint/explicit-function-return-type: off */
 
@@ -55757,7 +55757,7 @@ new vue_1.default({
     return h(main_vue_1.default);
   }
 });
-},{"vue":"../../../../node_modules/vue/dist/vue.runtime.esm.js","../../plugin/store":"../../plugin/store.ts","../../plugin/vuetify":"../../plugin/vuetify.ts","./main.vue":"import-clip/main.vue"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"vue":"../../../node_modules/vue/dist/vue.runtime.esm.js","../../plugin/store":"../plugin/store.ts","../../plugin/vuetify":"../plugin/vuetify.ts","./main.vue":"import-clip/main.vue"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -55785,7 +55785,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55195" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57086" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
