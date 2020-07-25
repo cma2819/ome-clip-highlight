@@ -17,8 +17,8 @@ export type spotifyWidgetConstructor = CreateNodecgConstructor<
   'nodecg-spotify-widget',
   {},
   {
-    'spotify-playing-context': SpotifyPlayingContext,
-    'spotify-playing-track': SpotifyPlayingTrack
+    spotifyPlayingContext: SpotifyPlayingContext,
+    spotifyPlayingTrack: SpotifyPlayingTrack
   },
   {},
   true

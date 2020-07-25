@@ -52141,14 +52141,14 @@ function (_super) {
 }(vue_property_decorator_1.Vue);
 
 exports.default = EventLogo;
-        var $ab68aa = exports.default || module.exports;
+        var $95e854 = exports.default || module.exports;
       
-      if (typeof $ab68aa === 'function') {
-        $ab68aa = $ab68aa.options;
+      if (typeof $95e854 === 'function') {
+        $95e854 = $95e854.options;
       }
     
         /* template */
-        Object.assign($ab68aa, (function () {
+        Object.assign($95e854, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -52183,9 +52183,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$ab68aa', $ab68aa);
+            api.createRecord('$95e854', $95e854);
           } else {
-            api.reload('$ab68aa', $ab68aa);
+            api.reload('$95e854', $95e854);
           }
         }
 
@@ -52267,14 +52267,14 @@ function (_super) {
 }(vue_property_decorator_1.Vue);
 
 exports.default = OverlayBase;
-        var $177548 = exports.default || module.exports;
+        var $9723a8 = exports.default || module.exports;
       
-      if (typeof $177548 === 'function') {
-        $177548 = $177548.options;
+      if (typeof $9723a8 === 'function') {
+        $9723a8 = $9723a8.options;
       }
     
         /* template */
-        Object.assign($177548, (function () {
+        Object.assign($9723a8, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -52311,9 +52311,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$177548', $177548);
+            api.createRecord('$9723a8', $9723a8);
           } else {
-            api.reload('$177548', $177548);
+            api.reload('$9723a8', $9723a8);
           }
         }
 
@@ -52387,14 +52387,14 @@ function (_super) {
 }(vue_property_decorator_1.Vue);
 
 exports.default = HighlightRankComponent;
-        var $89acac = exports.default || module.exports;
+        var $476b4a = exports.default || module.exports;
       
-      if (typeof $89acac === 'function') {
-        $89acac = $89acac.options;
+      if (typeof $476b4a === 'function') {
+        $476b4a = $476b4a.options;
       }
     
         /* template */
-        Object.assign($89acac, (function () {
+        Object.assign($476b4a, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -52424,7 +52424,7 @@ render._withStripped = true
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-            _scopeId: "data-v-89acac",
+            _scopeId: "data-v-476b4a",
             functional: undefined
           };
         })());
@@ -52437,9 +52437,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$89acac', $89acac);
+            api.createRecord('$476b4a', $476b4a);
           } else {
-            api.reload('$89acac', $89acac);
+            api.reload('$476b4a', $476b4a);
           }
         }
 
@@ -52513,14 +52513,14 @@ function (_super) {
 }(vue_property_decorator_1.Vue);
 
 exports.default = HighlightThumbnailComponent;
-        var $63e9b4 = exports.default || module.exports;
+        var $2553b9 = exports.default || module.exports;
       
-      if (typeof $63e9b4 === 'function') {
-        $63e9b4 = $63e9b4.options;
+      if (typeof $2553b9 === 'function') {
+        $2553b9 = $2553b9.options;
       }
     
         /* template */
-        Object.assign($63e9b4, (function () {
+        Object.assign($2553b9, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -52540,7 +52540,7 @@ render._withStripped = true
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-            _scopeId: "data-v-63e9b4",
+            _scopeId: "data-v-2553b9",
             functional: undefined
           };
         })());
@@ -52553,9 +52553,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$63e9b4', $63e9b4);
+            api.createRecord('$2553b9', $2553b9);
           } else {
-            api.reload('$63e9b4', $63e9b4);
+            api.reload('$2553b9', $2553b9);
           }
         }
 
@@ -52631,14 +52631,14 @@ function (_super) {
 }(vue_property_decorator_1.Vue);
 
 exports.default = HighlightTitleComponent;
-        var $e0ae04 = exports.default || module.exports;
+        var $aff4ad = exports.default || module.exports;
       
-      if (typeof $e0ae04 === 'function') {
-        $e0ae04 = $e0ae04.options;
+      if (typeof $aff4ad === 'function') {
+        $aff4ad = $aff4ad.options;
       }
     
         /* template */
-        Object.assign($e0ae04, (function () {
+        Object.assign($aff4ad, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -52665,7 +52665,7 @@ render._withStripped = true
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-            _scopeId: "data-v-e0ae04",
+            _scopeId: "data-v-aff4ad",
             functional: undefined
           };
         })());
@@ -52678,9 +52678,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$e0ae04', $e0ae04);
+            api.createRecord('$aff4ad', $aff4ad);
           } else {
-            api.reload('$e0ae04', $e0ae04);
+            api.reload('$aff4ad', $aff4ad);
           }
         }
 
@@ -52756,14 +52756,14 @@ function (_super) {
 }(vue_property_decorator_1.Vue);
 
 exports.default = HighlightPlayingTrackComponent;
-        var $70c18b = exports.default || module.exports;
+        var $12f2ff = exports.default || module.exports;
       
-      if (typeof $70c18b === 'function') {
-        $70c18b = $70c18b.options;
+      if (typeof $12f2ff === 'function') {
+        $12f2ff = $12f2ff.options;
       }
     
         /* template */
-        Object.assign($70c18b, (function () {
+        Object.assign($12f2ff, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -52812,7 +52812,7 @@ render._withStripped = true
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-            _scopeId: "data-v-70c18b",
+            _scopeId: "data-v-12f2ff",
             functional: undefined
           };
         })());
@@ -52825,9 +52825,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$70c18b', $70c18b);
+            api.createRecord('$12f2ff', $12f2ff);
           } else {
-            api.reload('$70c18b', $70c18b);
+            api.reload('$12f2ff', $12f2ff);
           }
         }
 
@@ -55255,7 +55255,6 @@ function (_super) {
     nodecg.Replicant('spotifyPlayingContext', 'nodecg-spotify-widget').on('change', function (context) {
       var _a;
 
-      console.log(context);
       _this.spotifyIsPlaying = ((_a = context) === null || _a === void 0 ? void 0 : _a.is_playing) || false;
     });
   };
@@ -55302,14 +55301,14 @@ function (_super) {
 }(vue_property_decorator_1.Vue);
 
 exports.default = App;
-        var $8b1878 = exports.default || module.exports;
+        var $5d60a5 = exports.default || module.exports;
       
-      if (typeof $8b1878 === 'function') {
-        $8b1878 = $8b1878.options;
+      if (typeof $5d60a5 === 'function') {
+        $5d60a5 = $5d60a5.options;
       }
     
         /* template */
-        Object.assign($8b1878, (function () {
+        Object.assign($5d60a5, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -55392,30 +55391,32 @@ exports.default = App;
         1
       ),
       _vm._v(" "),
-      _vm.spotifyIsPlaying && _vm.spotifyTrack
-        ? _c(
-            "div",
-            {
-              style: {
-                position: "absolute",
-                bottom: "0px",
-                left: "0px",
-                margin: "25px 25px",
-                width: "1280px",
-                font: "24px Kosugi Maru"
-              }
-            },
-            [
-              _c("highlight-playing-track", {
-                attrs: {
-                  title: _vm.spotifyTrack.name,
-                  artist: _vm.spotifyArtistName
+      _c("transition", { attrs: { name: "track" } }, [
+        _vm.spotifyIsPlaying && _vm.spotifyTrack
+          ? _c(
+              "div",
+              {
+                style: {
+                  position: "absolute",
+                  bottom: "0px",
+                  left: "0px",
+                  margin: "25px 25px",
+                  width: "1280px",
+                  font: "24px Kosugi Maru"
                 }
-              })
-            ],
-            1
-          )
-        : _vm._e(),
+              },
+              [
+                _c("highlight-playing-track", {
+                  attrs: {
+                    title: _vm.spotifyTrack.name,
+                    artist: _vm.spotifyArtistName
+                  }
+                })
+              ],
+              1
+            )
+          : _vm._e()
+      ]),
       _vm._v(" "),
       _c(
         "div",
@@ -55467,7 +55468,7 @@ render._withStripped = true
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-            _scopeId: "data-v-8b1878",
+            _scopeId: "data-v-5d60a5",
             functional: undefined
           };
         })());
@@ -55480,9 +55481,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$8b1878', $8b1878);
+            api.createRecord('$5d60a5', $5d60a5);
           } else {
-            api.reload('$8b1878', $8b1878);
+            api.reload('$5d60a5', $5d60a5);
           }
         }
 
@@ -55551,7 +55552,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62371" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60693" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

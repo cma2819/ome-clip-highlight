@@ -57,22 +57,24 @@
         :clip-rank="currentState.rank"
       ></highlight-rank>
     </div>
-    <div
-      v-if="spotifyIsPlaying && spotifyTrack"
-      :style="{
-        position: 'absolute',
-        bottom: '0px',
-        left: '0px',
-        margin: '25px 25px',
-        width: '1280px',
-        font: '24px Kosugi Maru'
-      }"
-    >
-      <highlight-playing-track
-        :title="spotifyTrack.name"
-        :artist="spotifyArtistName"
-      ></highlight-playing-track>
-    </div>
+    <transition name="track">
+      <div
+        v-if="spotifyIsPlaying && spotifyTrack"
+        :style="{
+          position: 'absolute',
+          bottom: '0px',
+          left: '0px',
+          margin: '25px 25px',
+          width: '1280px',
+          font: '24px Kosugi Maru'
+        }"
+      >
+        <highlight-playing-track
+          :title="spotifyTrack.name"
+          :artist="spotifyArtistName"
+        ></highlight-playing-track>
+      </div>
+    </transition>
     <div
       :style="{
         position: 'absolute',
@@ -133,6 +135,15 @@
   opacity: 0;
   transform: translateX(25px);
 }
+
+.track-enter-active, .track-leave-active {
+  transition: opacity .5s, transform .5s;
+}
+
+.track-enter, .track-leave-to {
+  opacity: 0;
+  transform: translateX(-10px);
+}
 </style>
 
 <script lang="ts">
@@ -189,7 +200,6 @@ export default class App extends Vue {
     });
 
     nodecg.Replicant('spotifyPlayingContext', 'nodecg-spotify-widget').on('change', (context) => {
-      console.log(context);
       this.spotifyIsPlaying = context?.is_playing || false;
     });
   }
