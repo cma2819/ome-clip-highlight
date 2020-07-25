@@ -67,7 +67,7 @@
     "build:dashboard": "parcel build src/browser/dashboard/*/*.html --out-dir dashboard --public-url ./",
     "build:extension": "tsc -b src/extension/",
     "build:graphics": "parcel build src/browser/graphics/*/*.html --out-dir graphics --public-url ./",
-    "clean": "trash .cache dashboard graphics extension",
+    "clean": "trash .cache",
     "watch:dashboard": "parcel watch src/browser/dashboard/*/*.html --out-dir dashboard --public-url ./",
     "watch:extension": "tsc -b src/extension/ -w",
     "watch:graphics": "parcel watch src/browser/graphics/*/*.html --out-dir graphics --public-url ./",

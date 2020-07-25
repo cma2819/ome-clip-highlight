@@ -66,7 +66,7 @@
           left: '0px',
           margin: '25px 25px',
           width: '1280px',
-          font: '24px Kosugi Maru'
+          font: '32px Kosugi Maru'
         }"
       >
         <highlight-playing-track
