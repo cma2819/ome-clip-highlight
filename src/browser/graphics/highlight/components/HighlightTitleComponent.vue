@@ -20,7 +20,7 @@ div#root {
   height: 100%;
   font-weight: bold;
   font-family: 'Kosugi Maru';
-  color: white;
+  color: #222222;
 }
 </style>
 

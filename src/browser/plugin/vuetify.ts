@@ -4,7 +4,7 @@ import '@fortawesome/fontawesome-free/css/all.css' // Ensure you are using css-l
 import 'vuetify/dist/vuetify.min.css'
 import Vuetify from 'vuetify';
 
-import kusoge from './themes/kusoge';
+import pgrf from './themes/pgrf';
 
 Vue.use(Vuetify);
 
@@ -15,7 +15,7 @@ export default new Vuetify({
     theme: {
         dark: true,
         themes: {
-            light: kusoge
+			light: pgrf
         }
     }
 });
