@@ -104,7 +104,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "clone": "^2.1.2",
     "ts-lib": "^0.0.5",
     "tslib": "^2.1.0",
