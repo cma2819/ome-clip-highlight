@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
-var axios_1 = tslib_1.__importDefault(require("axios"));
+var axios_1 = require("axios");
 var tokenUrl = 'https://id.twitch.tv/oauth2/token';
 exports.authCredential = function (clientKey, clientSecret, scope) {
     if (scope === void 0) { scope = 'user:read:email'; }

@@ -11,4 +11,5 @@ export interface Configschema {
 		key: string;
 		secret: string;
 	};
+	dark?: boolean;
 }

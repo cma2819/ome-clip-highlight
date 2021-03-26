@@ -66,7 +66,8 @@
           left: '0px',
           margin: '25px 25px',
           width: '1280px',
-          font: '24px Kosugi Maru'
+          font: '24px Kosugi Maru',
+          color: $vuetify.theme.themes.light.primary
         }"
       >
         <highlight-playing-track

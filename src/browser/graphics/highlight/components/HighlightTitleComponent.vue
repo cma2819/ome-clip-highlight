@@ -1,5 +1,10 @@
 <template>
-  <div id="root">
+  <div
+    id="root"
+    :style="{
+      color: $vuetify.theme.themes.light.primary
+    }"
+  >
     <div>
       {{ title }}
     </div>
@@ -20,7 +25,6 @@ div#root {
   height: 100%;
   font-weight: bold;
   font-family: 'Kosugi Maru';
-  color: #222222;
 }
 </style>
 
