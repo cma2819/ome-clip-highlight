@@ -64,7 +64,7 @@ export default class App extends Vue {
       }
       this.currentClip = currentClip;
     });
-    
+
     nodecg.Replicant('twitchClipStateArray').on('change', (newVal) => {
       this.clipStates = clone(newVal);
     });

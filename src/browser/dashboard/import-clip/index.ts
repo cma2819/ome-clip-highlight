@@ -2,7 +2,7 @@
 
 import Vue from 'vue';
 import store from '../../plugin/store';
-import vuetify from '../../plugin/vuetify';
+import vuetify from '../../plugin/vuetify.dashboard';
 import App from './main.vue';
 
 new Vue({
